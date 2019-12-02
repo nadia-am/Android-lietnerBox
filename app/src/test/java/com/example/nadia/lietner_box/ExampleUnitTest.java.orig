@@ -1,0 +1,84 @@
+package com.example.nadia.lietner_box;
+
+<<<<<<< HEAD
+//import org.junit.Test;
+//
+//import static org.junit.Assert.*;
+//
+///**
+// * To work on unit tests, switch the Test Artifact in the Build Variants view.
+// */
+//public class ExampleUnitTest {
+//    @Test
+//    public void addition_isCorrect() throws Exception {
+//        assertEquals(4, 2 + 2);
+//    }
+//}
+=======
+import android.database.sqlite.SQLiteDatabase;
+import android.util.Log;
+
+import com.example.nadia.lietner_box.models.DaoMaster;
+import com.example.nadia.lietner_box.models.DaoSession;
+import com.example.nadia.lietner_box.models.group;
+import com.example.nadia.lietner_box.models.groupDao;
+
+import org.junit.Before;
+import org.junit.Test;
+import org.junit.runner.RunWith;
+import org.mockito.runners.MockitoJUnitRunner;
+import org.robolectric.RobolectricTestRunner;
+import org.robolectric.RuntimeEnvironment;
+import org.robolectric.annotation.Config;
+
+import java.io.File;
+import java.util.List;
+
+import de.greenrobot.dao.query.QueryBuilder;
+
+import static org.junit.Assert.*;
+/**
+ * To work on unit tests, switch the Test Artifact in the Build Variants view.
+ */
+@RunWith(RobolectricTestRunner.class)
+@Config(constants = BuildConfig.class)
+public class ExampleUnitTest {
+    private DaoSession daoSession;
+    List<group> allGrpName;
+
+    DaoMaster.DevOpenHelper openHelper = new DaoMaster.DevOpenHelper(RuntimeEnvironment.application, null, null);
+    SQLiteDatabase db = openHelper.getWritableDatabase();
+    @Test
+    public void addition_isCorrect() throws Exception {
+        int x=2+2;
+        assertEquals(4, x);
+    }
+    @Test
+    public void set_Up_sqlite() throws Exception {
+        String filePath = getClass().getResource("/testDB.db").toURI().getPath();
+        SQLiteDatabase db = SQLiteDatabase.openDatabase((new File(filePath)).getAbsolutePath()
+                ,null,SQLiteDatabase.OPEN_READWRITE);
+        String CREATE_CONTACTS_TABLE = "CREATE TABLE tbl234 (ID  INTEGER PRIMARY KEY);";
+        db.execSQL(CREATE_CONTACTS_TABLE);
+    }
+    @Test
+    public void setUp_insert() {
+        daoSession = new DaoMaster(db).newSession();
+        groupDao grpDao = daoSession.getGroupDao();
+        group group=new group();
+        group.setGroupName("test");
+        grpDao.insert(group);
+        assertNotNull(grpDao.getTablename());
+    }
+    @Test
+    public void read_table_grp(){
+        DaoMaster daoMaster = new DaoMaster(db);
+        daoSession = daoMaster.newSession();
+        groupDao grp_read=daoSession.getGroupDao();
+        QueryBuilder qbReadG = grp_read.queryBuilder();
+        qbReadG.orderAsc(groupDao.Properties.Date);
+        allGrpName = qbReadG.list();
+        Log.i("unit test","grp read successfully");
+    }
+}
+>>>>>>> origin/objectOriented

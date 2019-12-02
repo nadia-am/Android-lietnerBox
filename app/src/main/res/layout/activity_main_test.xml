@@ -1,0 +1,290 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="0.9">
+
+        <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="0.25"
+        android:id="@+id/rel_main"
+        android:visibility="visible">
+
+            <RelativeLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="#8f5db7"
+                android:layout_weight="0.25"
+                android:gravity="center|right"
+                android:layout_gravity="top"
+                android:id="@+id/lin_header"
+                android:padding="5dp"
+                android:layout_alignParentTop="true">
+
+                <FrameLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="left"
+                    android:layout_centerVertical="true"
+                    android:padding="2dp"
+                    android:id="@+id/flback"
+                    android:visibility="invisible">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/tvback"
+                        android:gravity="center"
+                        android:layout_gravity="center"
+                        android:textSize="20dp"
+                        android:textColor="#ffffff"/>
+                </FrameLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/tv_appName"
+                    android:textSize="20dp"
+                    android:textStyle="bold"
+                    android:textColor="#ffffff"
+                    android:gravity="right|center"
+                    android:layout_toLeftOf="@+id/fl_drawer"
+                    android:layout_centerVertical="true" />
+
+                <FrameLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:id="@+id/fl_drawer"
+                    android:layout_gravity="center"
+                    android:paddingLeft="20dp"
+                    android:paddingRight="20dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/tv_drawer"
+                        android:textSize="20dp"
+                        android:textStyle="bold"
+                        android:textColor="#ffffff"
+                        android:gravity="center_vertical|center_horizontal|center"
+                        android:layout_gravity="center"
+                        android:visibility="visible" />
+                </FrameLayout>
+
+            </RelativeLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="fill_parent"
+            android:layout_height="2dp"
+            android:background="@drawable/gradient_reg"
+            android:layout_alignParentTop="false"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:id="@+id/Lin_shadow"
+            android:layout_below="@+id/lin_header">
+        </LinearLayout>
+
+        <RelativeLayout
+            xmlns:fab="http://schemas.android.com/apk/res-auto"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bacgroundrepeat"
+            android:layout_weight="7"
+            android:id="@+id/rel_view"
+            android:layout_below="@+id/Lin_shadow"
+            android:layout_alignParentBottom="true"
+            android:gravity="right"
+            android:foregroundGravity="right">
+
+            <com.telerik.widget.list.RadListView
+                android:id="@+id/lv_show_grps"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+
+
+            <com.getbase.floatingactionbutton.FloatingActionsMenu
+                android:id="@+id/multiple_actions"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true"
+                fab:fab_addButtonColorNormal="#00B8D4"
+                fab:fab_addButtonColorPressed="#EEEEEE"
+                fab:fab_addButtonPlusIconColor="#ffffff"
+                fab:fab_labelStyle="@style/menu_labels_style"
+                android:layout_marginBottom="16dp"
+                android:layout_marginRight="16dp"
+                android:layout_marginEnd="16dp">
+
+                <com.getbase.floatingactionbutton.FloatingActionButton
+                    android:id="@+id/fab_group"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    fab:fab_colorNormal="#ffffff"
+                    fab:fab_title="ایجاد گروه"
+                    fab:fab_colorPressed="#EEEEEE"
+                    android:background="@drawable/circle_shodow"
+                    fab:fab_icon="@drawable/file" />
+
+                <com.getbase.floatingactionbutton.FloatingActionButton
+                    android:id="@+id/fab_folder"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    fab:fab_colorNormal="#ffffff"
+                    fab:fab_title="ایجاد پوشه"
+                    fab:fab_colorPressed="#EEEEEE"
+                    fab:fab_icon="@drawable/folder" />
+
+            </com.getbase.floatingactionbutton.FloatingActionsMenu>
+        </RelativeLayout>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/rel_onLongClick"
+            android:paddingLeft="25dp"
+            android:paddingRight="25dp"
+            android:gravity="center_vertical|center_horizontal"
+            android:background="@color/black_transparent"
+            android:visibility="gone"
+            android:paddingTop="50dp"
+            android:paddingBottom="50dp"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true">
+
+            <com.telerik.widget.list.RadListView
+                android:id="@+id/lv_longclick"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/rel_help"
+            android:visibility="invisible"
+            android:gravity="right">
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:alpha="0.7"
+                android:background="#000000"
+                android:id="@+id/lin_h"
+                android:layout_height="45dp"></LinearLayout>
+
+            <RelativeLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_below="@+id/lin_h"
+                android:id="@+id/Lin_list"
+                android:layout_height="90dp">
+
+                <RelativeLayout
+                    android:orientation="horizontal"
+                    android:layout_height="match_parent"
+                    android:id="@+id/lin_r"
+                    android:background="#000000"
+                    android:alpha="0.7"
+                    android:gravity="left"
+                    android:layout_alignParentRight="true"
+                    android:layout_width="15dp"></RelativeLayout>
+
+                <RelativeLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:id="@+id/lin_c"
+                    android:gravity="center"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:paddingLeft="20dp"
+                    android:paddingRight="20dp"
+                    android:paddingStart="20dp"
+                    android:paddingTop="20dp">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:srcCompat="@drawable/long_press"
+                        android:id="@+id/imageView2" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:orientation="horizontal"
+                    android:layout_height="match_parent"
+                    android:id="@+id/lin_l"
+                    android:alpha="0.7"
+                    android:background="#000000"
+                    android:gravity="right"
+                    android:layout_gravity="right"
+                    android:layout_alignParentLeft="true"
+                    android:layout_width="15dp"></RelativeLayout>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:alpha="0.7"
+                android:background="#000000"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/Lin_list">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/tv_txt"
+                    android:textColor="#ffffff"
+                    android:textSize="22sp"
+                    android:gravity="right"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginTop="50dp" />
+
+                <FrameLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:id="@+id/fl_ok"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="50dp"
+                    android:layout_alignParentBottom="true">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/tv_ok"
+                        android:textSize="28sp"
+                        android:textColor="#00B8D4"
+                        android:layout_below="@+id/tv_txt"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentBottom="false"
+                        android:gravity="right"
+                        android:background="#000000" />
+                </FrameLayout>
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+</LinearLayout>

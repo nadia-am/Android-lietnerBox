@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <RelativeLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="#8f5db7"
+        android:gravity="center|right"
+        android:layout_gravity="top"
+        android:id="@+id/rel_header">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/tv_appName"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            android:textColor="#ffffff"
+            android:layout_alignParentRight="true"
+            android:gravity="center_vertical|center_horizontal"
+            android:layout_centerInParent="true"
+            android:layout_marginRight="10dp" />
+        <FrameLayout
+            android:layout_width="40dp"
+            android:layout_height="match_parent"
+            android:id="@+id/fram_Back"
+            android:layout_centerInParent="true"
+            android:layout_alignParentLeft="true"
+            android:gravity="left|center_vertical|center_horizontal"
+            android:layout_marginRight="5dp">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/text_back"
+                android:textSize="20dp"
+                android:textColor="#ffffff"
+                android:layout_centerInParent="true"
+                android:gravity="center_vertical|center|center_horizontal"
+                android:layout_gravity="center" />
+
+        </FrameLayout>
+
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="2dp"
+        android:background="@drawable/gradient_reg"
+        android:layout_alignParentTop="false"
+        android:layout_alignParentLeft="false"
+        android:layout_alignParentStart="false"
+        android:id="@+id/linlayout"
+        android:layout_below="@+id/rel_header">
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#EEEEEE">
+
+        <TextView
+            android:text="TextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/tv_buy"
+            android:gravity="right"
+            android:textSize="18sp"
+            android:padding="15dp" />
+
+        <TextView
+            android:text="TextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/tv_price"
+            android:gravity="right"
+            android:textSize="18sp"
+            android:padding="15dp"
+            android:textStyle="normal|bold" />
+        </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/rel"
+        android:gravity="center_horizontal"
+        android:background="#EEEEEE"
+        android:padding="20dp">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/lin_cancel"
+            android:layout_weight="0.1"
+            android:layout_marginRight="10dp"
+            android:gravity="center_vertical|center_horizontal">
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_height="wrap_content"
+                android:clickable="true"
+                android:id="@+id/button_cancel"
+                android:layout_width="wrap_content"
+                android:background="@drawable/btn_custom"
+                android:layout_gravity="right"
+                android:gravity="center_vertical|center_horizontal"
+                android:paddingTop="15dp"
+                android:paddingBottom="15dp"
+                android:paddingRight="25dp"
+                android:paddingLeft="25dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:id="@+id/cancel"
+                    android:layout_marginRight="5dp"
+                    android:textColor="#000000"
+                    android:textSize="14sp"
+                    android:gravity="center_vertical|center_horizontal"
+                    android:layout_gravity="center_vertical|center_horizontal" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/cancel_icon"
+                    android:layout_weight="1"
+                    android:textColor="#b71c1c"
+                    android:textSize="22sp"
+                    android:gravity="center_vertical|center_horizontal"
+                    android:layout_gravity="center_vertical|center_horizontal" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.1"
+            android:id="@+id/lin_buy"
+            android:layout_marginLeft="10dp"
+            android:gravity="center_vertical|center_horizontal">
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_height="wrap_content"
+                android:clickable="true"
+                android:id="@+id/button_buy"
+                android:layout_marginRight="1dp"
+                android:layout_width="wrap_content"
+                android:background="@drawable/btn_custom"
+                android:layout_gravity="left"
+                android:gravity="center_vertical|center_horizontal"
+                android:paddingLeft="25dp"
+                android:paddingRight="25dp"
+                android:paddingTop="15dp"
+                android:paddingBottom="15dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:id="@+id/buy"
+                    android:layout_marginRight="5dp"
+                    android:textColor="#000000"
+                    android:textSize="14sp"
+                    android:gravity="center_vertical|center_horizontal"
+                    android:layout_gravity="center_vertical|center_horizontal" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/buy_icon"
+                    android:layout_weight="1"
+                    android:textColor="#4CAF50"
+                    android:textSize="22sp"
+                    android:layout_gravity="center_vertical|center_horizontal" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <!--<Button-->
+            <!--android:text="Button"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:id="@+id/btn_cancel"-->
+            <!--android:layout_toLeftOf="@+id/btn_buy"-->
+            <!--android:background="@drawable/btn_custom"-->
+            <!--android:layout_margin="10dp" />-->
+
+        <!--<Button-->
+            <!--android:text="Button"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:id="@+id/btn_buy"-->
+            <!--android:background="@drawable/btn_custom"-->
+            <!--android:layout_alignParentRight="false"-->
+            <!--android:layout_margin="10dp" />-->
+
+    </LinearLayout>
+
+</LinearLayout>

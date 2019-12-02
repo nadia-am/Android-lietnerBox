@@ -1,0 +1,170 @@
+<resources>
+    <string name="app_name">جعبه لایتنر</string>
+    <string name="app_dolphin">جعبه لایتنر دلفین</string>
+    <string name="app_dolphin_des">ابزاری مفید برای یادگیری سریع و راحت</string>
+
+
+    <string name="app_creatGroup">ایجاد گروه جدید</string>
+    <string name="app_menu">منو</string>
+
+    <string name="app_newCard">+ کارت جدید</string>
+    <string name="app_groupInfo">اطلاعات گروه</string>
+    <string name="app_cardInfo">اطلاعات کارت ها</string>
+    <string name="app_todayDate">تاریخ امروز</string>
+    <string name="app_addGroupDate">تاریخ ایجاد گروه</string>
+    <string name="app_date1">95.1.1</string>
+    <string name="app_date2">94.12.12</string>
+    <string name="app_numberOfCard">تعداد کارت ها</string>
+    <string name="app_reviewCard">تعداد کارت های قابل مرور</string>
+    <string name="app_memorizeCard">تعداد کارت های حفظ شده</string>
+    <!--<string name="app_numberOfCardNum">40</string>-->
+    <string name="app_reviewCardNum">10</string>
+    <string name="app_memorizeCardNum">4</string>
+    <string name="app_reviewCards">مرور</string>
+
+    <string name="app_question">سوال</string>
+    <string name="app_question_mark">&#xf29c;</string>
+    <string name="app_answer">جواب</string>
+    <string name="app_answer_mark">&#xf2b4;</string>
+    <string name="app_addCard">اضافه شود</string>
+    <string name="app_groupName">اسم گروه</string>
+    <string name="app_updateGroup">بروز رسانی</string>
+
+    <string name="app_refuse">بعدی</string>
+    <string name="app_before">قبلی</string>
+
+    <string name="next">&#xf061;</string>
+    <string name="previous">&#xf060;</string>
+
+    <string name="app_correcrt">&#xf00c;</string>
+    <string name="app_correcrt_I">&#xf00c;</string>
+    <string name="app_incorrect">&#xf00d;</string>
+    <string name="app_save">ذخیره</string>
+    <string name="app_cancel">انصراف</string>
+    <string name="app_finish">انصراف</string>
+    <string name="app_edit">ویرایش</string>
+
+    <string name="icon_menu">&#xf0c9;</string>
+    <string name="icon_back">&#xf060;</string>
+    <string name="icon_addCard">&#xf067;</string>
+    <string name="icon_edit">&#xf040;</string>
+    <string name="app_login">ورود</string>
+    <string name="app_help">راهنما</string>
+    <string name="app_help_icon">&#xf059; </string>
+
+    <string name="app_setting">تنظیمات</string>
+    <string name="app_setting_icon">&#xf013;</string>
+
+    <string name="app_about">درباره</string>
+    <string name="app_about_icon">&#xf015;</string>
+
+    <string name="app_exit">خروج</string>
+    <string name="app_total_tag">*جعبه لایتنر چیست؟</string>
+    <string name="app_lietner_tag">*آموزش کار با نرم افزار</string>
+    <!-- Exception-->
+    <string name="nameIsnUniqe_grp">نام وارد شده وجود دارد، لطفا نام دیگری وارد کنید</string>
+
+    <!-- drawer listview -->
+    <string name="fhome">&#xf015;</string>
+    <string name="home">صفحه اصلی</string>
+
+    <string name="fnoti">&#xf0f3;</string>
+    <string name="noti">وضعیت نمایش هشدار</string>
+
+    <string name="fsettime">&#xf017;</string>
+    <string name="settime">تنظیم زمان هشدار</string>
+
+    <string name="fbackup">&#xf019;</string>
+    <string name="backup">پشتیبان گیری</string>
+    <string name="upLoad">&#xf0ed;</string>
+
+    <string name="download">&#xf07a;</string>
+    <string name="get_download">&#xf019;</string>
+
+
+    <string name="app_crdNum">تعداد کارتها : </string>
+    <string name="app_protectInfo">شماره خانه حفظ شود؟</string>
+    <string name="app_backup_info">اطلاعات پشتیبان گیری</string>
+
+    <string name="app_load_file">بارگذاری اطلاعات</string>
+    <string name="app_drawer">&#xf0c9; </string>
+
+    <string name="app_version">نسخه</string>
+    <string name="app_version_num">1.6</string>
+    <string name="app_report_icon">&#xf188;</string>
+    <string name="app_report">گزارش مشکلات برنامه</string>
+
+    <string name="price504">1500 تومان</string>
+    <string name="price1100">2000 تومان</string>
+    <string name="pricefirst">1000 تومان</string>
+    <string name="pricesec">1000 تومان</string>
+    <string name="pricethird">1000 تومان</string>
+    <string name="pricepish">1000 تومان</string>
+    <string name="pricecountry">800 تومان</string>
+
+    <string name="app_buy_icon">&#xf07a;</string>
+    <string name="app_cancelfont">&#xf00d;</string>
+
+    <string name="app_dl">&#xf019;</string>
+
+    <!--<listview of drawer>-->
+    <string-array name="title_setting_list_fa">
+        <item>بارگذاری فایل پشتیبان</item>
+        <item>دانلود بسته های آماده</item>
+        <item>تنظیمات</item>
+        <item>راهنما</item>
+        <item>درباره</item>
+
+    </string-array>
+
+    <string-array name="right_icon_setting_list_fa">
+        <item>@string/upLoad</item>
+        <item>@string/download</item>
+        <item>@string/app_setting_icon</item>
+        <item>@string/app_help_icon</item>
+        <item>@string/app_about_icon</item>
+
+
+    </string-array>
+
+    <!--errors-->
+    <string name="error">نوع فایل انتخابی درست نمی باشد!</string>
+
+
+    <string-array name="option_list">
+        <item>پشتیبان گیری</item>
+        <item>ویرایش</item>
+        <item>حذف</item>
+    </string-array>
+
+    <string-array name="option_list_folder">
+        <item>ویرایش</item>
+        <item>حذف</item>
+    </string-array>
+
+    <string name="download_failed">دانلود با مشکل مواجع شد!</string>
+
+    <string name="add_to_list">افزودن به لیست</string>
+    <string name="add_to_list_f">&#xf067;</string>
+    <string name="fof">504</string>
+    <string name="hundred">1100</string>
+    <string name="highSchool">سال اول دبیرستان</string>
+    <string name="sechighSchool">سال دوم دبیرستان</string>
+    <string name="thirdhighSchool">سال سوم دبیرستان</string>
+    <string name="forthhighSchool">پیش دانشگاهی</string>
+    <string name="country">کشورهای جهان</string>
+    <string name="app_buy">خرید</string>
+
+    <string name="download_file">دریافت</string>
+
+    <string name="folderName">نام پوشه</string>
+
+    <string name="grpsName">نام گروه ها</string>
+
+    <string name="app_amountOfGrp">تعداد گروه ها :</string>
+
+    <string name="app_descript">توضیحات : هر گروه شامل 12 کارت است.</string>
+
+    <string name="wait">لطفا تا دانلود کامل فایل شکیبا باشید</string>
+
+</resources>
