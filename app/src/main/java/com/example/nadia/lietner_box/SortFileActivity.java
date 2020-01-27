@@ -5,8 +5,7 @@ import android.content.Intent;
 import android.graphics.Typeface;
 import android.os.AsyncTask;
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.SwitchCompat;
+
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
@@ -15,6 +14,10 @@ import android.widget.EditText;
 import android.widget.FrameLayout;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.SwitchCompat;
+
 import com.example.nadia.lietner_box.bl.cards_bl;
 import com.example.nadia.lietner_box.bl.groups_bl;
 import com.example.nadia.lietner_box.lib.CustomException;
@@ -22,7 +25,7 @@ import com.example.nadia.lietner_box.lib.errorMsg;
 import com.example.nadia.lietner_box.models.card;
 import com.example.nadia.lietner_box.models.group;
 import com.example.nadia.lietner_box.models.groupDao;
-import com.opencsv.CSVReader;
+//import com.opencsv.CSVReader;
 import java.io.FileReader;
 import java.io.IOException;
 import java.text.DateFormat;
@@ -106,33 +109,33 @@ public class SortFileActivity  extends AppCompatActivity implements View.OnClick
         Answer.clear();
         cardCel.clear();
         Ldate.clear();
-        try {
-            CSVReader reader = new CSVReader(new FileReader(path), '\t');
-            String[] read;
-            read = reader.readNext();
-            if (read==null){
-                String[] bits = path.split("/");
-                String lastOne = bits[bits.length-1];
-                grpName=lastOne;
-
-            }else{
-                grpName = read[1];
-                for (int i = 0; read != null; i++) {
-                    Question.add(read[2]);
-                    Answer.add(read[3]);
-                    cardCel.add(Integer.valueOf(read[4]));
-                    Ldate.add((read[5]));
-                    read = reader.readNext();
-                }
-            }
-        }catch (Error e){
-            Toast.makeText(getApplicationContext(),getResources().getText(R.string.error), Toast.LENGTH_LONG).show();
-            finish();
-        } catch (IOException e) {
-            e.printStackTrace();
-            Toast.makeText(getApplicationContext(),getResources().getText(R.string.error), Toast.LENGTH_LONG).show();
-            finish();
-        }
+//        try {
+//            CSVReader reader = new CSVReader(new FileReader(path), '\t');
+//            String[] read;
+//            read = reader.readNext();
+//            if (read==null){
+//                String[] bits = path.split("/");
+//                String lastOne = bits[bits.length-1];
+//                grpName=lastOne;
+//
+//            }else{
+//                grpName = read[1];
+//                for (int i = 0; read != null; i++) {
+//                    Question.add(read[2]);
+//                    Answer.add(read[3]);
+//                    cardCel.add(Integer.valueOf(read[4]));
+//                    Ldate.add((read[5]));
+//                    read = reader.readNext();
+//                }
+//            }
+//        }catch (Error e){
+//            Toast.makeText(getApplicationContext(),getResources().getText(R.string.error), Toast.LENGTH_LONG).show();
+//            finish();
+//        } catch (IOException e) {
+//            e.printStackTrace();
+//            Toast.makeText(getApplicationContext(),getResources().getText(R.string.error), Toast.LENGTH_LONG).show();
+//            finish();
+//        }
         //___________________________________________
 
         EditText etGrpName=(EditText) findViewById(R.id.et_grpName);

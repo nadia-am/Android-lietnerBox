@@ -13,9 +13,7 @@ import android.graphics.Typeface;
 import android.os.AsyncTask;
 import android.os.Build;
 import android.os.Bundle;
-import android.support.design.widget.FloatingActionButton;
-import android.support.v7.app.AppCompatActivity;
-import android.support.v7.app.NotificationCompat;
+import androidx.appcompat.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
 import android.widget.FrameLayout;
@@ -31,6 +29,7 @@ import com.example.nadia.lietner_box.models.card;
 import com.example.nadia.lietner_box.models.cardDao;
 import com.example.nadia.lietner_box.models.group;
 import com.example.nadia.lietner_box.models.groupDao;
+import com.getbase.floatingactionbutton.FloatingActionButton;
 
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;

@@ -14,10 +14,10 @@ import android.net.Uri;
 import android.os.Environment;
 import android.os.Handler;
 import android.os.IBinder;
-import android.support.design.widget.FloatingActionButton;
-import android.support.v4.app.ActivityCompat;
-import android.support.v4.content.ContextCompat;
-import android.support.v7.app.AppCompatActivity;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.app.ActivityCompat;
+import androidx.core.content.ContextCompat;
+
 import android.os.Bundle;
 import android.text.TextPaint;
 import android.util.Log;
@@ -46,7 +46,7 @@ import com.github.amlcurran.showcaseview.targets.ViewTarget;
 import com.google.android.gms.appindexing.Action;
 import com.google.android.gms.appindexing.AppIndex;
 import com.google.android.gms.common.api.GoogleApiClient;
-import com.opencsv.CSVWriter;
+//import com.opencsv.CSVWriter;
 import com.telerik.android.common.Util;
 import com.telerik.android.primitives.widget.sidedrawer.DrawerChangeListener;
 import com.telerik.android.primitives.widget.sidedrawer.DrawerLocation;
@@ -460,23 +460,23 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                                 File root = android.os.Environment.getExternalStorageDirectory();
                                 File dir = new File(root.getAbsolutePath() + "/dolphin_Backup");
                                 dir.mkdirs();
-                                try {
-                                    CSVWriter writer = new CSVWriter(new FileWriter(Environment.getExternalStorageDirectory() +"/dolphin_backup/"+getGrp.getGroupName()+".csv"),'\t');
-                                    for(int i=0;i<crds.size();i++) {
-                                        String crd_grpId=String.valueOf(crds.get(i).getGroupId());
-                                        String grp_name = String.valueOf(String.valueOf(getGrp.getGroupName()));
-                                        String crd_question=String.valueOf(crds.get(i).getQuestion());
-                                        String crd_answer=String.valueOf(crds.get(i).getAnswer());
-                                        String crd_cardcel=String.valueOf(crds.get(i).getCardCel());
-                                        String crd_Ldate=String.valueOf(crds.get(i).getLDate());
-                                        String[] crd_value={crd_grpId,grp_name,crd_question,crd_answer,crd_cardcel,crd_Ldate};
-                                        writer.writeNext(crd_value);
-                                    }
-                                    writer.close();
-                                    showMsg("پشتیبان گیری","فایل در پوشه ی dolphin_backup ذخیره شد.");
-                                } catch (IOException e) {
-                                    e.printStackTrace();
-                                }
+//                                try {
+//                                    CSVWriter writer = new CSVWriter(new FileWriter(Environment.getExternalStorageDirectory() +"/dolphin_backup/"+getGrp.getGroupName()+".csv"),'\t');
+//                                    for(int i=0;i<crds.size();i++) {
+//                                        String crd_grpId=String.valueOf(crds.get(i).getGroupId());
+//                                        String grp_name = String.valueOf(String.valueOf(getGrp.getGroupName()));
+//                                        String crd_question=String.valueOf(crds.get(i).getQuestion());
+//                                        String crd_answer=String.valueOf(crds.get(i).getAnswer());
+//                                        String crd_cardcel=String.valueOf(crds.get(i).getCardCel());
+//                                        String crd_Ldate=String.valueOf(crds.get(i).getLDate());
+//                                        String[] crd_value={crd_grpId,grp_name,crd_question,crd_answer,crd_cardcel,crd_Ldate};
+//                                        writer.writeNext(crd_value);
+//                                    }
+//                                    writer.close();
+//                                    showMsg("پشتیبان گیری","فایل در پوشه ی dolphin_backup ذخیره شد.");
+//                                } catch (IOException e) {
+//                                    e.printStackTrace();
+//                                }
                                 break;
                         }
                     }

@@ -186,7 +186,6 @@ public class groups_bl {
         cards card_models = new cards(_context);
         grp=group_models.read_groups(selectedId);
 
-
         for (int i=0;i<grp.size();i++) {
             groupWithCards _groupWithCards = new groupWithCards();
             _groupWithCards.setId( grp.get(i).getId());

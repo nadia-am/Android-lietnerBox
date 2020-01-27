@@ -2,11 +2,13 @@ package com.example.nadia.lietner_box;
 
 import android.app.NotificationManager;
 import android.app.PendingIntent;
+import android.app.TaskStackBuilder;
 import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
-import android.support.v4.app.NotificationCompat;
-import android.support.v4.app.TaskStackBuilder;
+
+import androidx.core.app.NotificationCompat;
+
 import com.example.nadia.lietner_box.bl.cards_bl;
 import com.example.nadia.lietner_box.bl.setting_bl;
 import com.example.nadia.lietner_box.lib.date;
@@ -49,7 +51,7 @@ public class AlarmReceiver extends BroadcastReceiver {
             boolean sec_con = (((first == 0) && (now_h == set_hour) && (now_m <= set_minute)));
             if (first_con || sec_con) {
                 ///////////--------------notification----------
-                NotificationCompat.Builder mBuilder = new NotificationCompat.Builder(context);
+                NotificationCompat.Builder mBuilder = new NotificationCompat.Builder(context , "notification_channel_id");
                 mBuilder.setSmallIcon(R.drawable.dolphin_noti);
                 mBuilder.setContentTitle("مرور کارتها");
                 mBuilder.setContentText("تعدادی کارت برای مرور وجود دارد");

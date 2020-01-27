@@ -16,9 +16,10 @@ import android.os.Bundle;
 import android.os.Environment;
 import android.os.Handler;
 import android.os.IBinder;
-import android.support.v4.app.ActivityCompat;
-import android.support.v4.content.ContextCompat;
-import android.support.v7.app.AppCompatActivity;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.app.ActivityCompat;
+import androidx.core.content.ContextCompat;
+
 import android.text.TextPaint;
 import android.util.Log;
 import android.util.TypedValue;
@@ -38,12 +39,6 @@ import com.example.nadia.lietner_box.models.group;
 import com.example.nadia.lietner_box.models.groupWithCards;
 import com.getbase.floatingactionbutton.FloatingActionButton;
 import com.getbase.floatingactionbutton.FloatingActionsMenu;
-import com.github.amlcurran.showcaseview.ShowcaseView;
-import com.github.amlcurran.showcaseview.targets.ViewTarget;
-import com.google.android.gms.appindexing.Action;
-import com.google.android.gms.appindexing.AppIndex;
-import com.google.android.gms.common.api.GoogleApiClient;
-import com.opencsv.CSVWriter;
 import com.telerik.android.common.Util;
 import com.telerik.android.primitives.widget.sidedrawer.DrawerChangeListener;
 import com.telerik.android.primitives.widget.sidedrawer.DrawerLocation;
@@ -53,6 +48,7 @@ import com.telerik.widget.list.RadListView;
 import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.io.Writer;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
@@ -297,24 +293,26 @@ public class MainTest extends AppCompatActivity implements View.OnClickListener 
                             File root = android.os.Environment.getExternalStorageDirectory();
                             File dir = new File(root.getAbsolutePath() + "/dolphin_Backup");
                             dir.mkdirs();
-                            try {
-                                CSVWriter writer = new CSVWriter(new FileWriter(Environment.getExternalStorageDirectory() +"/dolphin_backup/"+selected_grp.getGroupName()+".csv"),'\t');
-                                for(int i=0;i<crds.size();i++) {
-                                    String crd_grpId=String.valueOf(crds.get(i).getGroupId());
-                                    String grp_name = String.valueOf(String.valueOf(selected_grp.getGroupName()));
-                                    String crd_question=String.valueOf(crds.get(i).getQuestion());
-                                    String crd_answer=String.valueOf(crds.get(i).getAnswer());
-                                    String crd_cardcel=String.valueOf(crds.get(i).getCardCel());
-                                    String crd_Ldate=String.valueOf(crds.get(i).getLDate());
-                                    String[] crd_value={crd_grpId,grp_name,crd_question,crd_answer,crd_cardcel,crd_Ldate};
-                                    writer.writeNext(crd_value);
-                                }
-                                writer.close();
-                                showMsg("پشتیبان گیری","فایل در پوشه ی dolphin_backup ذخیره شد.");
-                                rel_onLongClick.setVisibility(View.INVISIBLE);
-                            } catch (IOException e) {
-                                e.printStackTrace();
-                            }
+                            //TODO
+//                            try {
+//                                CSVWriter writer = new CSVWriter(new FileWriter(Environment.getExternalStorageDirectory() +"/dolphin_backup/"+selected_grp.getGroupName()+".csv"),'\t');
+//                                for(int i=0;i<crds.size();i++) {
+//                                    String crd_grpId=String.valueOf(crds.get(i).getGroupId());
+//                                    String grp_name = String.valueOf(String.valueOf(selected_grp.getGroupName()));
+//                                    String crd_question=String.valueOf(crds.get(i).getQuestion());
+//                                    String crd_answer=String.valueOf(crds.get(i).getAnswer());
+//                                    String crd_cardcel=String.valueOf(crds.get(i).getCardCel());
+//                                    String crd_Ldate=String.valueOf(crds.get(i).getLDate());
+//                                    String[] crd_value={crd_grpId,grp_name,crd_question,crd_answer,crd_cardcel,crd_Ldate};
+//                                    writer.writeNext(crd_value);
+//                                }
+//                                writer.close();
+//                                showMsg("پشتیبان گیری","فایل در پوشه ی dolphin_backup ذخیره شد.");
+//                                rel_onLongClick.setVisibility(View.INVISIBLE);
+//                            } catch (IOException e) {
+//                                e.printStackTrace();
+//                            }
+
                             break;
                         case 1://edit
                             Intent editeGrpName = new Intent(MainTest.this, AddNewGroupActivity.class);
@@ -450,6 +448,7 @@ public class MainTest extends AppCompatActivity implements View.OnClickListener 
             dialog.dismiss();
             super.onPostExecute(result);
         }
+
     }
 
     private class deletegrp extends AsyncTask<Void,Void, String[]>{
@@ -603,7 +602,6 @@ public class MainTest extends AppCompatActivity implements View.OnClickListener 
                 break;
         }
     }
-
 
     public void reload_main_listView (){
 

@@ -58,7 +58,6 @@ public class cards {
             Log.i("fgcbc","dfgdvg");
         }
     }
-
     public card updateCard(card crd) {
         DaoMaster.DevOpenHelper helper = new DaoMaster.DevOpenHelper(_context, " DaoMaster ", null);
         SQLiteDatabase db = helper.getWritableDatabase();
