@@ -39,6 +39,7 @@ import com.example.nadia.lietner_box.models.group;
 import com.example.nadia.lietner_box.models.groupWithCards;
 import com.getbase.floatingactionbutton.FloatingActionButton;
 import com.getbase.floatingactionbutton.FloatingActionsMenu;
+import com.opencsv.CSVWriter;
 import com.telerik.android.common.Util;
 import com.telerik.android.primitives.widget.sidedrawer.DrawerChangeListener;
 import com.telerik.android.primitives.widget.sidedrawer.DrawerLocation;
@@ -46,9 +47,12 @@ import com.telerik.android.primitives.widget.sidedrawer.RadSideDrawer;
 import com.telerik.widget.list.ItemReorderBehavior;
 import com.telerik.widget.list.RadListView;
 import java.io.File;
+import java.io.FileOutputStream;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.io.OutputStreamWriter;
 import java.io.Writer;
+import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
@@ -294,24 +298,33 @@ public class MainTest extends AppCompatActivity implements View.OnClickListener 
                             File dir = new File(root.getAbsolutePath() + "/dolphin_Backup");
                             dir.mkdirs();
                             //TODO
-//                            try {
+                            try {
+                                CSVWriter writer = new CSVWriter(
+                                        new OutputStreamWriter(new FileOutputStream(getExternalFilesDir(null) +"/dolphin_backup/" + selected_grp.getGroupName()+".csv"), StandardCharsets.UTF_8),
+                                        '\t',
+                                        CSVWriter.DEFAULT_QUOTE_CHARACTER,
+                                        CSVWriter.DEFAULT_ESCAPE_CHARACTER,
+                                        CSVWriter.DEFAULT_LINE_END
+                                );
+
+
 //                                CSVWriter writer = new CSVWriter(new FileWriter(Environment.getExternalStorageDirectory() +"/dolphin_backup/"+selected_grp.getGroupName()+".csv"),'\t');
-//                                for(int i=0;i<crds.size();i++) {
-//                                    String crd_grpId=String.valueOf(crds.get(i).getGroupId());
-//                                    String grp_name = String.valueOf(String.valueOf(selected_grp.getGroupName()));
-//                                    String crd_question=String.valueOf(crds.get(i).getQuestion());
-//                                    String crd_answer=String.valueOf(crds.get(i).getAnswer());
-//                                    String crd_cardcel=String.valueOf(crds.get(i).getCardCel());
-//                                    String crd_Ldate=String.valueOf(crds.get(i).getLDate());
-//                                    String[] crd_value={crd_grpId,grp_name,crd_question,crd_answer,crd_cardcel,crd_Ldate};
-//                                    writer.writeNext(crd_value);
-//                                }
-//                                writer.close();
-//                                showMsg("پشتیبان گیری","فایل در پوشه ی dolphin_backup ذخیره شد.");
-//                                rel_onLongClick.setVisibility(View.INVISIBLE);
-//                            } catch (IOException e) {
-//                                e.printStackTrace();
-//                            }
+                                for(int i=0;i<crds.size();i++) {
+                                    String crd_grpId=String.valueOf(crds.get(i).getGroupId());
+                                    String grp_name = String.valueOf(String.valueOf(selected_grp.getGroupName()));
+                                    String crd_question=String.valueOf(crds.get(i).getQuestion());
+                                    String crd_answer=String.valueOf(crds.get(i).getAnswer());
+                                    String crd_cardcel=String.valueOf(crds.get(i).getCardCel());
+                                    String crd_Ldate=String.valueOf(crds.get(i).getLDate());
+                                    String[] crd_value={crd_grpId,grp_name,crd_question,crd_answer,crd_cardcel,crd_Ldate};
+                                    writer.writeNext(crd_value);
+                                }
+                                writer.close();
+                                showMsg("پشتیبان گیری","فایل در پوشه ی dolphin_backup ذخیره شد.");
+                                rel_onLongClick.setVisibility(View.INVISIBLE);
+                            } catch (IOException e) {
+                                e.printStackTrace();
+                            }
 
                             break;
                         case 1://edit

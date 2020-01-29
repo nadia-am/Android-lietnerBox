@@ -85,7 +85,8 @@ public class GetFileActivity extends AppCompatActivity implements View.OnClickLi
                 //if the selected is a file add it to our path else is csv file sent its full path to next activity to read it
                 if (Extension.equals("csv")) {//send file full-path to SortFileActivity activity
                     path_arr = get_path.forward(itemValue, path_arr);
-                    String path = Environment.getExternalStorageDirectory() + get_path.convert(path_arr);
+//                    String path = Environment.getExternalStorageDirectory() + get_path.convert(path_arr);
+                    String path = getExternalFilesDir(null) + get_path.convert(path_arr);
 
                     Intent myIntent = new Intent(GetFileActivity.this, SortFileActivity.class);
                     myIntent.putExtra("path", path);

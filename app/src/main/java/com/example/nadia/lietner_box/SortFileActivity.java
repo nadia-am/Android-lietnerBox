@@ -25,6 +25,10 @@ import com.example.nadia.lietner_box.lib.errorMsg;
 import com.example.nadia.lietner_box.models.card;
 import com.example.nadia.lietner_box.models.group;
 import com.example.nadia.lietner_box.models.groupDao;
+import com.opencsv.CSVParser;
+import com.opencsv.CSVParserBuilder;
+import com.opencsv.CSVReader;
+import com.opencsv.CSVReaderBuilder;
 //import com.opencsv.CSVReader;
 import java.io.FileReader;
 import java.io.IOException;
@@ -109,33 +113,36 @@ public class SortFileActivity  extends AppCompatActivity implements View.OnClick
         Answer.clear();
         cardCel.clear();
         Ldate.clear();
-//        try {
+        try {
+            CSVParser csvParser = new CSVParserBuilder().withSeparator(',').build();
+
+            CSVReader reader = new CSVReaderBuilder(new FileReader(path)).withCSVParser(csvParser).build();
 //            CSVReader reader = new CSVReader(new FileReader(path), '\t');
-//            String[] read;
-//            read = reader.readNext();
-//            if (read==null){
-//                String[] bits = path.split("/");
-//                String lastOne = bits[bits.length-1];
-//                grpName=lastOne;
-//
-//            }else{
-//                grpName = read[1];
-//                for (int i = 0; read != null; i++) {
-//                    Question.add(read[2]);
-//                    Answer.add(read[3]);
-//                    cardCel.add(Integer.valueOf(read[4]));
-//                    Ldate.add((read[5]));
-//                    read = reader.readNext();
-//                }
-//            }
-//        }catch (Error e){
-//            Toast.makeText(getApplicationContext(),getResources().getText(R.string.error), Toast.LENGTH_LONG).show();
-//            finish();
-//        } catch (IOException e) {
-//            e.printStackTrace();
-//            Toast.makeText(getApplicationContext(),getResources().getText(R.string.error), Toast.LENGTH_LONG).show();
-//            finish();
-//        }
+            String[] read;
+            read = reader.readNext();
+            if (read==null){
+                String[] bits = path.split("/");
+                String lastOne = bits[bits.length-1];
+                grpName=lastOne;
+
+            }else{
+                grpName = read[1];
+                for (int i = 0; read != null; i++) {
+                    Question.add(read[2]);
+                    Answer.add(read[3]);
+                    cardCel.add(Integer.valueOf(read[4]));
+                    Ldate.add((read[5]));
+                    read = reader.readNext();
+                }
+            }
+        }catch (Error e){
+            Toast.makeText(getApplicationContext(),getResources().getText(R.string.error), Toast.LENGTH_LONG).show();
+            finish();
+        } catch (IOException e) {
+            e.printStackTrace();
+            Toast.makeText(getApplicationContext(),getResources().getText(R.string.error), Toast.LENGTH_LONG).show();
+            finish();
+        }
         //___________________________________________
 
         EditText etGrpName=(EditText) findViewById(R.id.et_grpName);
