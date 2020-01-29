@@ -15,4 +15,11 @@
     <color name="pressedColor">#16000000</color>
     <color name="perple">#8f5db7</color>
     <color name="bg_gray">#F5F5F5</color>
+    <color name="gray100">#E0E0E0</color>
+    <color name="gray200">#BDBDBD</color>
+    <color name="gray300">#9E9E9E</color>
+    <color name="gray400">#757575</color>
+    <color name="gray500">#616161</color>
+    <color name="gray600">#424242</color>
+    bg_gray
 </resources>

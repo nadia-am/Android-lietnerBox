@@ -64,8 +64,8 @@ public class MainTest extends AppCompatActivity implements View.OnClickListener 
     RadSideDrawer sideDrawer;
     ArrayList<DrawerListObject> drawerListItems  = new ArrayList<DrawerListObject>();
     DrawerListObject drawerListObject;
-    RadListView lv_drawerList;
-    DrawerListAdapter drawerListAdapter = new DrawerListAdapter(new ArrayList<>());
+//    RadListView lv_drawerList;
+//    DrawerListAdapter drawerListAdapter = new DrawerListAdapter(new ArrayList<>());
     RadListView lv_show_grps;
     RadListView lv_longclick;
     List<String> option_list;
@@ -105,104 +105,89 @@ public class MainTest extends AppCompatActivity implements View.OnClickListener 
         sideDrawer.setDrawerLocation(DrawerLocation.RIGHT);
         sideDrawer.setDrawerSize((int) Util.getDimen(TypedValue.COMPLEX_UNIT_DIP, 300));
         setContentView(sideDrawer);
-        //___________________listView_of_drawer________________________
-        lv_drawerList = (RadListView)findViewById(R.id.lv_drawer);
-        List<String> drawerTitleLines = Arrays.asList(getResources().getStringArray(R.array.title_setting_list_fa));
-        List<String> accountRightIconLines = Arrays.asList(getResources().getStringArray(R.array.right_icon_setting_list_fa));
-        drawerListItems.clear();
-        for (int i=0; i< drawerTitleLines.size();i++){
-            drawerListObject = new DrawerListObject();
-            drawerListObject.setTitle(drawerTitleLines.get(i));
-            drawerListObject.setRightIcon(accountRightIconLines.get(i));
 
-            drawerListItems.add(i, drawerListObject);
-        }
-        drawerListAdapter = new DrawerListAdapter(drawerListItems);
-        lv_drawerList.setAdapter(drawerListAdapter);
+//        RadListView.ItemClickListener item_lv_account = new RadListView.ItemClickListener() {
+//            @Override
+//            public void onItemClick(int position, MotionEvent motionEvent) {
+//                switch (position){
+//                    case 0://load file
+//                        purchase_bl purchaseBl= new purchase_bl(MainTest.this);
+//                        int  buy=purchaseBl.countThisName("backup");
+//                        if (buy==0){
+//                            Intent buyIntent= new Intent(MainTest.this, BuyLoadfile.class);
+//                            startActivity(buyIntent);
+//                        }else{
+//                            Intent GetFileIntent3 = new Intent(MainTest.this, GetFileActivity.class);
+//                            GetFileIntent3.putExtra("selectedId",selectedId);
+//                            startActivity(GetFileIntent3);
+//                        }
+//                        Handler handler8 = new Handler();
+//                        handler8.postDelayed(new Runnable() {
+//                            @Override
+//                            public void run() {
+//                                // Do something after 5s = 5000ms
+//                                sideDrawer.setIsOpen(false);
+//                            }
+//                        }, 200);
+//                        break;
+//                    case 1://download package
+//                        Intent downloadIntent = new Intent(MainTest.this, DownloadActivity.class);
+//                        startActivity(downloadIntent);
+//                        Handler handler9 = new Handler();
+//                        handler9.postDelayed(new Runnable() {
+//                            @Override
+//                            public void run() {
+//                                // Do something after 5s = 5000ms
+//                                sideDrawer.setIsOpen(false);
+//                            }
+//                        }, 200);
+//                        break;
+//                    case 2://setting
+//                        Intent settingIntent = new Intent(MainTest.this,SettingActivity.class);
+//                        startActivity(settingIntent);
+////                        startActivityForResult(settingIntent,1);
+//                        Handler handler4 = new Handler();
+//                        handler4.postDelayed(new Runnable() {
+//                            @Override
+//                            public void run() {
+//                                // Do something after 5s = 5000ms
+//                                sideDrawer.setIsOpen(false);
+//                            }
+//                        }, 200);
+//                        break;
+//                    case 3://help
+//                        Intent intentHelp = new Intent(MainTest.this,HelpActivity.class);
+//                        startActivity(intentHelp);
+////                        startActivityForResult(intentHelp,1);
+//                        Handler handler6 = new Handler();
+//                        handler6.postDelayed(new Runnable() {
+//                            @Override
+//                            public void run() {
+//                                // Do something after 5s = 5000ms
+//                                sideDrawer.setIsOpen(false);
+//                            }
+//                        }, 200);
+//                        break;
+//                    case 4://about us
+//                        Intent linAbout_Intent2 = new Intent(MainTest.this, AboutActivity.class);
+//                        startActivity(linAbout_Intent2);
+//                        Handler handler = new Handler();
+//                        handler.postDelayed(new Runnable() {
+//                            @Override
+//                            public void run() {
+//                                // Do something after 5s = 5000ms
+//                                sideDrawer.setIsOpen(false);
+//                            }
+//                        }, 200);
+//                        break;
+//                }
+//            }
+//
+//            @Override
+//            public void onItemLongClick(int position, MotionEvent motionEvent) {
+//            }
+//        };
 
-        //___drawer listview onClick___
-        RadListView.ItemClickListener item_lv_account = new RadListView.ItemClickListener() {
-            @Override
-            public void onItemClick(int position, MotionEvent motionEvent) {
-                switch (position){
-                    case 0://load file
-                        purchase_bl purchaseBl= new purchase_bl(MainTest.this);
-                        int  buy=purchaseBl.countThisName("backup");
-                        if (buy==0){
-                            Intent buyIntent= new Intent(MainTest.this, BuyLoadfile.class);
-                            startActivity(buyIntent);
-                        }else{
-                            Intent GetFileIntent3 = new Intent(MainTest.this, GetFileActivity.class);
-                            GetFileIntent3.putExtra("selectedId",selectedId);
-                            startActivity(GetFileIntent3);
-                        }
-                        Handler handler8 = new Handler();
-                        handler8.postDelayed(new Runnable() {
-                            @Override
-                            public void run() {
-                                // Do something after 5s = 5000ms
-                                sideDrawer.setIsOpen(false);
-                            }
-                        }, 200);
-                        break;
-                    case 1://download package
-                        Intent downloadIntent = new Intent(MainTest.this, DownloadActivity.class);
-                        startActivity(downloadIntent);
-                        Handler handler9 = new Handler();
-                        handler9.postDelayed(new Runnable() {
-                            @Override
-                            public void run() {
-                                // Do something after 5s = 5000ms
-                                sideDrawer.setIsOpen(false);
-                            }
-                        }, 200);
-                        break;
-                    case 2://setting
-                        Intent settingIntent = new Intent(MainTest.this,SettingActivity.class);
-                        startActivity(settingIntent);
-//                        startActivityForResult(settingIntent,1);
-                        Handler handler4 = new Handler();
-                        handler4.postDelayed(new Runnable() {
-                            @Override
-                            public void run() {
-                                // Do something after 5s = 5000ms
-                                sideDrawer.setIsOpen(false);
-                            }
-                        }, 200);
-                        break;
-                    case 3://help
-                        Intent intentHelp = new Intent(MainTest.this,HelpActivity.class);
-                        startActivity(intentHelp);
-//                        startActivityForResult(intentHelp,1);
-                        Handler handler6 = new Handler();
-                        handler6.postDelayed(new Runnable() {
-                            @Override
-                            public void run() {
-                                // Do something after 5s = 5000ms
-                                sideDrawer.setIsOpen(false);
-                            }
-                        }, 200);
-                        break;
-                    case 4://about us
-                        Intent linAbout_Intent2 = new Intent(MainTest.this, AboutActivity.class);
-                        startActivity(linAbout_Intent2);
-                        Handler handler = new Handler();
-                        handler.postDelayed(new Runnable() {
-                            @Override
-                            public void run() {
-                                // Do something after 5s = 5000ms
-                                sideDrawer.setIsOpen(false);
-                            }
-                        }, 200);
-                        break;
-                }
-            }
-
-            @Override
-            public void onItemLongClick(int position, MotionEvent motionEvent) {
-            }
-        };
-        lv_drawerList.addItemClickListener(item_lv_account);
         //______________Drawer_Change_Listener_Help_________________________________
         sideDrawer.addChangeListener(new DrawerChangeListener() {
             @Override
@@ -514,6 +499,77 @@ public class MainTest extends AppCompatActivity implements View.OnClickListener 
     @Override
     public void onClick(View v) {
         switch (v.getId()){
+            case R.id.lin_backup:
+                purchase_bl purchaseBl= new purchase_bl(MainTest.this);
+                int  buy=purchaseBl.countThisName("backup");
+                if (buy==0){
+                    Intent buyIntent= new Intent(MainTest.this, BuyLoadfile.class);
+                    startActivity(buyIntent);
+                }else{
+                    Intent GetFileIntent3 = new Intent(MainTest.this, GetFileActivity.class);
+                    GetFileIntent3.putExtra("selectedId",selectedId);
+                    startActivity(GetFileIntent3);
+                }
+                Handler handler8 = new Handler();
+                handler8.postDelayed(new Runnable() {
+                    @Override
+                    public void run() {
+                        // Do something after 5s = 5000ms
+                        sideDrawer.setIsOpen(false);
+                    }
+                }, 200);
+                break;
+            case R.id.lin_download:
+                 Intent downloadIntent = new Intent(MainTest.this, DownloadActivity.class);
+                 startActivity(downloadIntent);
+                 Handler handler9 = new Handler();
+                 handler9.postDelayed(new Runnable() {
+                     @Override
+                     public void run() {
+                         // Do something after 5s = 5000ms
+                         sideDrawer.setIsOpen(false);
+                     }
+                 }, 200);
+                break;
+            case R.id.lin_setting:
+                 Intent settingIntent = new Intent(MainTest.this,SettingActivity.class);
+                 startActivity(settingIntent);
+//                        startActivityForResult(settingIntent,1);
+                 Handler handler4 = new Handler();
+                 handler4.postDelayed(new Runnable() {
+                     @Override
+                     public void run() {
+                         // Do something after 5s = 5000ms
+                         sideDrawer.setIsOpen(false);
+                     }
+                 }, 200);
+                break;
+            case R.id.lin_help:
+                Intent intentHelp = new Intent(MainTest.this,HelpActivity.class);
+                startActivity(intentHelp);
+//                        startActivityForResult(intentHelp,1);
+                Handler handler6 = new Handler();
+                handler6.postDelayed(new Runnable() {
+                    @Override
+                    public void run() {
+                        // Do something after 5s = 5000ms
+                        sideDrawer.setIsOpen(false);
+                    }
+                }, 200);
+               break;
+            case R.id.lin_contact_us:
+                Intent linAbout_Intent2 = new Intent(MainTest.this, AboutActivity.class);
+                startActivity(linAbout_Intent2);
+                Handler handler = new Handler();
+                handler.postDelayed(new Runnable() {
+                    @Override
+                    public void run() {
+                        // Do something after 5s = 5000ms
+                        sideDrawer.setIsOpen(false);
+                    }
+                }, 200);
+               break;
+
             case R.id.fl_drawer:
                 sideDrawer.setIsOpen(true);
                 setContentView(sideDrawer);

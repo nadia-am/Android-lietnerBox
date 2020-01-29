@@ -157,6 +157,14 @@
     <string name="no_folder_created">هیچ گروه و پوشه ای تاکنون ساخته نشده!</string>
     <string name="please_create">همین الان یکی بساز</string>
 
+
+
+    <string name="backup_package">بارگذاری فایل پشتیبان</string>
+    <string name="download_package">دانلود بسته های آماده</string>
+    <string name="setting">تنظیمات</string>
+    <string name="help">راهنما</string>
+    <string name="contact_us">ارتباط با ما</string>
+
     <string name="download_file">دریافت</string>
 
     <string name="folderName">نام پوشه</string>
