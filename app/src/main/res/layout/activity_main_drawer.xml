@@ -33,8 +33,10 @@
 
                     <ImageView
                         android:id="@+id/img_backup"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"
+                        android:layout_gravity="center|center_horizontal|center_vertical"
+                        android:layout_margin="5dp"
                         app:srcCompat="@drawable/img_backup" />
 
                     <TextView
@@ -68,8 +70,10 @@
 
                     <ImageView
                         android:id="@+id/img_basket"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"
+                        android:layout_gravity="center|center_horizontal|center_vertical"
+                        android:layout_margin="5dp"
                         app:srcCompat="@drawable/img_basket" />
 
                     <TextView
@@ -102,8 +106,10 @@
 
                     <ImageView
                         android:id="@+id/img_setting"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"
+                        android:layout_gravity="center|center_horizontal|center_vertical"
+                        android:layout_margin="5dp"
                         app:srcCompat="@drawable/img_setting" />
 
                     <TextView
@@ -136,8 +142,10 @@
 
                     <ImageView
                         android:id="@+id/img_help"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"
+                        android:layout_gravity="center|center_horizontal|center_vertical"
+                        android:layout_margin="5dp"
                         app:srcCompat="@drawable/img_help" />
 
                     <TextView
@@ -170,8 +178,10 @@
 
                     <ImageView
                         android:id="@+id/img_support"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"
+                        android:layout_gravity="center|center_horizontal|center_vertical"
+                        android:layout_margin="5dp"
                         app:srcCompat="@drawable/img_support" />
 
                     <TextView
