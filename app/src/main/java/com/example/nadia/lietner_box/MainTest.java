@@ -106,89 +106,6 @@ public class MainTest extends AppCompatActivity implements View.OnClickListener 
         sideDrawer.setDrawerSize((int) Util.getDimen(TypedValue.COMPLEX_UNIT_DIP, 300));
         setContentView(sideDrawer);
 
-//        RadListView.ItemClickListener item_lv_account = new RadListView.ItemClickListener() {
-//            @Override
-//            public void onItemClick(int position, MotionEvent motionEvent) {
-//                switch (position){
-//                    case 0://load file
-//                        purchase_bl purchaseBl= new purchase_bl(MainTest.this);
-//                        int  buy=purchaseBl.countThisName("backup");
-//                        if (buy==0){
-//                            Intent buyIntent= new Intent(MainTest.this, BuyLoadfile.class);
-//                            startActivity(buyIntent);
-//                        }else{
-//                            Intent GetFileIntent3 = new Intent(MainTest.this, GetFileActivity.class);
-//                            GetFileIntent3.putExtra("selectedId",selectedId);
-//                            startActivity(GetFileIntent3);
-//                        }
-//                        Handler handler8 = new Handler();
-//                        handler8.postDelayed(new Runnable() {
-//                            @Override
-//                            public void run() {
-//                                // Do something after 5s = 5000ms
-//                                sideDrawer.setIsOpen(false);
-//                            }
-//                        }, 200);
-//                        break;
-//                    case 1://download package
-//                        Intent downloadIntent = new Intent(MainTest.this, DownloadActivity.class);
-//                        startActivity(downloadIntent);
-//                        Handler handler9 = new Handler();
-//                        handler9.postDelayed(new Runnable() {
-//                            @Override
-//                            public void run() {
-//                                // Do something after 5s = 5000ms
-//                                sideDrawer.setIsOpen(false);
-//                            }
-//                        }, 200);
-//                        break;
-//                    case 2://setting
-//                        Intent settingIntent = new Intent(MainTest.this,SettingActivity.class);
-//                        startActivity(settingIntent);
-////                        startActivityForResult(settingIntent,1);
-//                        Handler handler4 = new Handler();
-//                        handler4.postDelayed(new Runnable() {
-//                            @Override
-//                            public void run() {
-//                                // Do something after 5s = 5000ms
-//                                sideDrawer.setIsOpen(false);
-//                            }
-//                        }, 200);
-//                        break;
-//                    case 3://help
-//                        Intent intentHelp = new Intent(MainTest.this,HelpActivity.class);
-//                        startActivity(intentHelp);
-////                        startActivityForResult(intentHelp,1);
-//                        Handler handler6 = new Handler();
-//                        handler6.postDelayed(new Runnable() {
-//                            @Override
-//                            public void run() {
-//                                // Do something after 5s = 5000ms
-//                                sideDrawer.setIsOpen(false);
-//                            }
-//                        }, 200);
-//                        break;
-//                    case 4://about us
-//                        Intent linAbout_Intent2 = new Intent(MainTest.this, AboutActivity.class);
-//                        startActivity(linAbout_Intent2);
-//                        Handler handler = new Handler();
-//                        handler.postDelayed(new Runnable() {
-//                            @Override
-//                            public void run() {
-//                                // Do something after 5s = 5000ms
-//                                sideDrawer.setIsOpen(false);
-//                            }
-//                        }, 200);
-//                        break;
-//                }
-//            }
-//
-//            @Override
-//            public void onItemLongClick(int position, MotionEvent motionEvent) {
-//            }
-//        };
-
-        //______________Drawer_Change_Listener_Help_________________________________
         sideDrawer.addChangeListener(new DrawerChangeListener() {
             @Override
             public boolean onDrawerOpening(RadSideDrawer radSideDrawer) {
@@ -237,10 +154,6 @@ public class MainTest extends AppCompatActivity implements View.OnClickListener 
 
         rel_empty = findViewById(R.id.rel_empty);
         rel_empty.setVisibility(View.INVISIBLE);
-
-        TextView appName = (TextView) findViewById(R.id.tv_appName);
-        appName.setText(R.string.app_name);
-        appName.setTypeface(custom_font);
 
         TextView drawer = (TextView) findViewById(R.id.tv_drawer);
         drawer.setText(R.string.app_drawer);

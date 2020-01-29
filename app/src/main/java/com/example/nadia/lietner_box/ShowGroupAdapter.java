@@ -4,6 +4,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import com.example.nadia.lietner_box.lib.method;
@@ -35,23 +36,21 @@ public class ShowGroupAdapter extends ListViewAdapter {
         myViewHolder viewHolder = (myViewHolder)holder;
         groupWithCards myGroup = (groupWithCards)getItems().get(position);
         String type=myGroup.getType();
-        //boolean type=myGroup.getType();
-        if (!(type.equals("folder"))){
-            viewHolder.listIcon.setImageResource(R.drawable.file);
 
-            viewHolder.allCard.setVisibility(View.VISIBLE);
+        if (!(type.equals("folder"))){
+            viewHolder.rel_icon.setVisibility(View.INVISIBLE);
+            viewHolder.rel_info.setVisibility(View.VISIBLE);
+
             viewHolder.allCard.setText("تعداد کل کارتها:");
 
-            viewHolder.allCardNum.setVisibility(View.VISIBLE);
             viewHolder.allCardNum.setText(myGroup.getAllCardNumber().toString());
 
-            viewHolder.reviewable.setVisibility(View.VISIBLE);
             viewHolder.reviewable.setText("تعدا کارتهای قابل مرور:");
-
-            viewHolder.reviewableNum.setVisibility(View.VISIBLE);
             viewHolder.reviewableNum.setText(myGroup.getReviewableCard().toString());
         }else {
-            viewHolder.listIcon.setImageResource(R.drawable.folder);
+            viewHolder.rel_icon.setVisibility(View.VISIBLE);
+            viewHolder.rel_info.setVisibility(View.GONE);
+
             viewHolder.allCard.setVisibility(View.GONE);
             viewHolder.allCardNum.setVisibility(View.GONE);
             viewHolder.reviewable.setVisibility(View.GONE);
@@ -65,6 +64,8 @@ public class ShowGroupAdapter extends ListViewAdapter {
     public static class myViewHolder extends ListViewHolder {
         TextView groupName;
         ImageView listIcon;
+        RelativeLayout rel_icon;
+        RelativeLayout rel_info;
         TextView allCard;
         TextView allCardNum;
         TextView reviewable;
@@ -76,6 +77,8 @@ public class ShowGroupAdapter extends ListViewAdapter {
             groupName.setTypeface(_method.GetTypeFace("IRANSansWeb.ttf"));
 
             listIcon = (ImageView)itemView.findViewById(R.id.icon);
+            rel_icon = itemView.findViewById(R.id.rel_icon);
+            rel_info = itemView.findViewById(R.id.rel_info);
 
             allCard=(TextView)itemView.findViewById(R.id.allCard);
             allCard.setTypeface(_method.GetTypeFace("IRANSansWeb.ttf"));
