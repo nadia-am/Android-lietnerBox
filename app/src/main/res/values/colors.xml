@@ -13,4 +13,6 @@
 
     <color name="black_transparent">#95212121</color>
     <color name="pressedColor">#16000000</color>
+    <color name="perple">#8f5db7</color>
+    <color name="bg_gray">#F5F5F5</color>
 </resources>
