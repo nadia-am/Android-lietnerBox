@@ -2,20 +2,14 @@ package com.example.nadia.lietner_box;
 
 import android.Manifest;
 import android.app.AlertDialog;
-import android.content.ComponentName;
-import android.content.Context;
 import android.content.Intent;
-import android.content.ServiceConnection;
-import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
 import android.graphics.Color;
 import android.graphics.Typeface;
-import android.net.Uri;
 import android.os.AsyncTask;
 import android.os.Bundle;
-import android.os.Environment;
 import android.os.Handler;
-import android.os.IBinder;
+
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
@@ -44,14 +38,11 @@ import com.telerik.android.common.Util;
 import com.telerik.android.primitives.widget.sidedrawer.DrawerChangeListener;
 import com.telerik.android.primitives.widget.sidedrawer.DrawerLocation;
 import com.telerik.android.primitives.widget.sidedrawer.RadSideDrawer;
-import com.telerik.widget.list.ItemReorderBehavior;
 import com.telerik.widget.list.RadListView;
 import java.io.File;
 import java.io.FileOutputStream;
-import java.io.FileWriter;
 import java.io.IOException;
 import java.io.OutputStreamWriter;
-import java.io.Writer;
 import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -91,6 +82,7 @@ public class MainTest extends AppCompatActivity implements View.OnClickListener 
     longClick_adapter longclick_adapter = new longClick_adapter(new ArrayList<>());
 
     RelativeLayout rel_onLongClick;
+    RelativeLayout rel_empty;
 
     groups_bl grpBl = new groups_bl(this);
     cards_bl crdBl = new cards_bl(this);
@@ -104,6 +96,8 @@ public class MainTest extends AppCompatActivity implements View.OnClickListener 
         Typeface font = Typeface.createFromAsset(getAssets(), "fontawesome-webfont.ttf");
         final Typeface custom_font = Typeface.createFromAsset(getAssets(), "IRANSansWeb.ttf");
         Typeface BNazanin = Typeface.createFromAsset(getAssets(), "BNAZANIN.TTF");
+
+
 
         sideDrawer = new RadSideDrawer(this);
         sideDrawer.setDrawerContent(R.layout.activity_main_drawer);
@@ -247,6 +241,17 @@ public class MainTest extends AppCompatActivity implements View.OnClickListener 
                     new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE},
                     REQUEST_WRITE_STORAGE);
         }
+
+        TextView tv_text = findViewById(R.id.tv_text);
+        tv_text.setText(R.string.no_folder_created);
+        tv_text.setTypeface(custom_font);
+
+        TextView alarm = findViewById(R.id.tv_alarm);
+        alarm.setText(R.string.please_create);
+        alarm.setTypeface(custom_font);
+
+        rel_empty = findViewById(R.id.rel_empty);
+        rel_empty.setVisibility(View.INVISIBLE);
 
         TextView appName = (TextView) findViewById(R.id.tv_appName);
         appName.setText(R.string.app_name);
@@ -618,6 +623,11 @@ public class MainTest extends AppCompatActivity implements View.OnClickListener 
 
     public void reload_main_listView (){
 
+        if(myGroups.size() == 0){
+            rel_empty.setVisibility(View.VISIBLE);
+        }else {
+            rel_empty.setVisibility(View.INVISIBLE);
+        }
         Adapter = new ShowGroupAdapter(myGroups);
         lv_show_grps.setAdapter(Adapter);
 

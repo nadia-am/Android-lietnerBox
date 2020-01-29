@@ -154,6 +154,8 @@
     <string name="forthhighSchool">پیش دانشگاهی</string>
     <string name="country">کشورهای جهان</string>
     <string name="app_buy">خرید</string>
+    <string name="no_folder_created">هیچ گروه و پوشه ای تاکنون ساخته نشده!</string>
+    <string name="please_create">همین الان یکی بساز</string>
 
     <string name="download_file">دریافت</string>
 
