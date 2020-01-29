@@ -21,5 +21,6 @@
     <color name="gray400">#757575</color>
     <color name="gray500">#616161</color>
     <color name="gray600">#424242</color>
+    <color name="gray90">#FAFAFA</color>
     bg_gray
 </resources>
