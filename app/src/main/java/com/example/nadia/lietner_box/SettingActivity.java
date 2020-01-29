@@ -10,6 +10,7 @@ import androidx.appcompat.widget.SwitchCompat;
 import android.view.View;
 import android.widget.FrameLayout;
 import android.widget.LinearLayout;
+import android.widget.Switch;
 import android.widget.TextView;
 import android.widget.CompoundButton;
 import android.widget.TimePicker;
@@ -36,12 +37,11 @@ public class SettingActivity extends AppCompatActivity implements View.OnClickLi
         Typeface font = Typeface.createFromAsset(getAssets(), "fontawesome-webfont.ttf");
         final setting_bl seting_bl = new setting_bl(this);
 
-        TextView menu = (TextView) findViewById(R.id.tv_appName);
-        menu.setTypeface(custom_font);
-        menu.setText(R.string.app_name);
+//        TextView menu = (TextView) findViewById(R.id.tv_appName);
+//        menu.setTypeface(custom_font);
+//        menu.setText(R.string.app_name);
 
-        FrameLayout fl_back = (FrameLayout) findViewById(R.id.flBack);
-        fl_back.setOnClickListener(this);
+
 
         TextView back = (TextView) findViewById(R.id.tv_back);
         back.setOnClickListener(this);
@@ -80,7 +80,7 @@ public class SettingActivity extends AppCompatActivity implements View.OnClickLi
         linSetTime.setVisibility(View.GONE);
         linSetTime.setOnClickListener(this);
 
-        SwitchCompat sw_btn = (SwitchCompat) findViewById(R.id.switch1);
+        Switch sw_btn =  findViewById(R.id.switch1);
         //find  status value and set it to our switch
         read_setting = seting_bl.readSetting();
         final boolean setting_status = read_setting.get(0).getStatus();
