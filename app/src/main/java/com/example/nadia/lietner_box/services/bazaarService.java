@@ -10,7 +10,6 @@ import android.util.Log;
 import android.widget.Toast;
 
 import com.example.nadia.lietner_box.IUpdateCheckService;
-import com.example.nadia.lietner_box.MainActivity;
 
 
 /**

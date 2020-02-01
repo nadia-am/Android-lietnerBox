@@ -12,6 +12,7 @@ import android.widget.Button;
 import android.widget.CompoundButton;
 import android.widget.EditText;
 import android.widget.FrameLayout;
+import android.widget.Switch;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -154,7 +155,7 @@ public class SortFileActivity  extends AppCompatActivity implements View.OnClick
         tvCrdNumTxtNum.setText(String.valueOf(Answer.size()));
         tvCrdNumTxtNum.setTypeface(BNazanin);
 
-        SwitchCompat sw_btn =  findViewById(R.id.switch1);
+        Switch sw_btn =  findViewById(R.id.switch1);
         check=false;
         sw_btn.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override

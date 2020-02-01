@@ -58,9 +58,9 @@ public class AlarmReceiver extends BroadcastReceiver {
                 //        mBuilder.setContentText(String.valueOf(x)+" کارت برای مرور وجود دارد");
                 mBuilder.setAutoCancel(true);
                 mBuilder.setDefaults(-1);
-                Intent resultIntent = new Intent(context, MainActivity.class);
+                Intent resultIntent = new Intent(context, MainPageActivity.class);
                 TaskStackBuilder stackBuilder = TaskStackBuilder.create(context);
-                stackBuilder.addParentStack(MainActivity.class);
+                stackBuilder.addParentStack(MainPageActivity.class);
                 stackBuilder.addNextIntent(resultIntent);
                 PendingIntent resultPendingIntent = stackBuilder.getPendingIntent(0, PendingIntent.FLAG_UPDATE_CURRENT);
                 mBuilder.setContentIntent(resultPendingIntent);

@@ -56,7 +56,6 @@ public class AddDLToListActivity extends AppCompatActivity implements View.OnCli
     ArrayList<String> answer = new ArrayList<>();
     errorMsg error = new errorMsg();
     ElasticDownloadView mElasticDownloadView;
-    LinearLayout linOther;
     RelativeLayout relLoading;
     String eachGrpName;
     Integer progress;
@@ -218,7 +217,6 @@ public class AddDLToListActivity extends AppCompatActivity implements View.OnCli
             relLoading.setVisibility(View.VISIBLE);
             mElasticDownloadView = (ElasticDownloadView) findViewById(R.id.elastic_download_view);
             mElasticDownloadView.startIntro();
-            linOther = (LinearLayout) findViewById(R.id.lin_other);
         }
         @Override
         protected String doInBackground(Void... params) {
