@@ -13,9 +13,9 @@
             <item android:bottom="2dp" android:left="2dp">
                 <shape>
 
-                    <solid android:color="#00B8D4"/>
-                    <stroke android:width="1dp" android:color="#00B8D4" />
-                    <corners android:radius="50dp" />
+                    <solid android:color="@color/perple"/>
+                    <stroke android:width="1dp" android:color="@color/perple" />
+                    <corners android:radius="20dp" />
                     <padding android:bottom="10dp" android:left="10dp"
                         android:right="10dp" android:top="10dp" />
                 </shape>

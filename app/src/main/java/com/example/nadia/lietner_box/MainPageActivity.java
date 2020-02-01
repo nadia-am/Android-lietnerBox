@@ -54,7 +54,7 @@ import dmax.dialog.SpotsDialog;
  * Created by Nadia on 12/5/2016.
  */
 
-public class MainTest extends AppCompatActivity implements View.OnClickListener  {
+public class MainPageActivity extends AppCompatActivity implements View.OnClickListener  {
 
     //---Bazaar-----
     private static final int REQUEST_WRITE_STORAGE = 112;
@@ -136,10 +136,10 @@ public class MainTest extends AppCompatActivity implements View.OnClickListener 
         });
 
         //______________premission android 6___________________________
-        boolean hasPermission = (ContextCompat.checkSelfPermission(MainTest.this,
+        boolean hasPermission = (ContextCompat.checkSelfPermission(MainPageActivity.this,
                 Manifest.permission.WRITE_EXTERNAL_STORAGE) == PackageManager.PERMISSION_GRANTED);
         if (!hasPermission) {
-            ActivityCompat.requestPermissions(MainTest.this,
+            ActivityCompat.requestPermissions(MainPageActivity.this,
                     new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE},
                     REQUEST_WRITE_STORAGE);
         }
@@ -231,7 +231,7 @@ public class MainTest extends AppCompatActivity implements View.OnClickListener 
 
                             break;
                         case 1://edit
-                            Intent editeGrpName = new Intent(MainTest.this, AddNewGroupActivity.class);
+                            Intent editeGrpName = new Intent(MainPageActivity.this, AddNewGroupActivity.class);
                             editeGrpName.putExtra("Group_Id", selected_grp.getId());
                             startActivityForResult(editeGrpName, 1);
                             rel_onLongClick.setVisibility(View.INVISIBLE);
@@ -244,7 +244,7 @@ public class MainTest extends AppCompatActivity implements View.OnClickListener 
                 }else {//selected group type are: folder Or download
                     switch (position){
                         case 0:
-                            Intent editeGrpName = new Intent(MainTest.this, AddNewGroupActivity.class);
+                            Intent editeGrpName = new Intent(MainPageActivity.this, AddNewGroupActivity.class);
                             editeGrpName.putExtra("Group_Id", selected_grp.getId());
                             startActivityForResult(editeGrpName, 1);
                             rel_onLongClick.setVisibility(View.INVISIBLE);
@@ -272,7 +272,7 @@ public class MainTest extends AppCompatActivity implements View.OnClickListener 
                 selected_grp = myGroups.get(position);
                 if (!(selected_grp.getType().equals("folder"))){
                     //selected_grp.getType().equals(true)
-                    Intent IntentGroup = new Intent(MainTest.this, SelectedGroupActivity.class);
+                    Intent IntentGroup = new Intent(MainPageActivity.this, SelectedGroupActivity.class);
                     IntentGroup.putExtra("position", position);
                     IntentGroup.putExtra("GroupName", selected_grp.getGroupName());
                     startActivity(IntentGroup);
@@ -332,7 +332,7 @@ public class MainTest extends AppCompatActivity implements View.OnClickListener 
                     //reload my activity with permission granted or use the features what required the permission
                 } else
                 {
-                    Toast.makeText(MainTest.this, "The app was not allowed to write to your storage. Hence, it cannot function properly. Please consider granting it this permission", Toast.LENGTH_LONG).show();
+                    Toast.makeText(MainPageActivity.this, "The app was not allowed to write to your storage. Hence, it cannot function properly. Please consider granting it this permission", Toast.LENGTH_LONG).show();
                 }
             }
         }
@@ -341,7 +341,7 @@ public class MainTest extends AppCompatActivity implements View.OnClickListener 
     private class LoadingPage extends AsyncTask<Void,Void, String[]>{
         @Override
         protected void onPreExecute(){
-            dialog = new SpotsDialog(MainTest.this);
+            dialog = new SpotsDialog(MainPageActivity.this);
             dialog.show();
         }
 
@@ -370,7 +370,7 @@ public class MainTest extends AppCompatActivity implements View.OnClickListener 
     private class deletegrp extends AsyncTask<Void,Void, String[]>{
         @Override
         protected void onPreExecute(){
-            dialog = new SpotsDialog(MainTest.this);
+            dialog = new SpotsDialog(MainPageActivity.this);
             dialog.show();
         }
 
@@ -391,7 +391,7 @@ public class MainTest extends AppCompatActivity implements View.OnClickListener 
     private class deleteWithSubGrp extends AsyncTask<Void,Void, String[]>{
         @Override
         protected void onPreExecute(){
-            dialog = new SpotsDialog(MainTest.this);
+            dialog = new SpotsDialog(MainPageActivity.this);
             dialog.show();
         }
 
@@ -413,13 +413,13 @@ public class MainTest extends AppCompatActivity implements View.OnClickListener 
     public void onClick(View v) {
         switch (v.getId()){
             case R.id.lin_backup:
-                purchase_bl purchaseBl= new purchase_bl(MainTest.this);
+                purchase_bl purchaseBl= new purchase_bl(MainPageActivity.this);
                 int  buy=purchaseBl.countThisName("backup");
                 if (buy==0){
-                    Intent buyIntent= new Intent(MainTest.this, BuyLoadfile.class);
+                    Intent buyIntent= new Intent(MainPageActivity.this, BuyLoadfile.class);
                     startActivity(buyIntent);
                 }else{
-                    Intent GetFileIntent3 = new Intent(MainTest.this, GetFileActivity.class);
+                    Intent GetFileIntent3 = new Intent(MainPageActivity.this, GetFileActivity.class);
                     GetFileIntent3.putExtra("selectedId",selectedId);
                     startActivity(GetFileIntent3);
                 }
@@ -433,7 +433,7 @@ public class MainTest extends AppCompatActivity implements View.OnClickListener 
                 }, 200);
                 break;
             case R.id.lin_download:
-                 Intent downloadIntent = new Intent(MainTest.this, DownloadActivity.class);
+                 Intent downloadIntent = new Intent(MainPageActivity.this, DownloadActivity.class);
                  startActivity(downloadIntent);
                  Handler handler9 = new Handler();
                  handler9.postDelayed(new Runnable() {
@@ -445,7 +445,7 @@ public class MainTest extends AppCompatActivity implements View.OnClickListener 
                  }, 200);
                 break;
             case R.id.lin_setting:
-                 Intent settingIntent = new Intent(MainTest.this,SettingActivity.class);
+                 Intent settingIntent = new Intent(MainPageActivity.this,SettingActivity.class);
                  startActivity(settingIntent);
 //                        startActivityForResult(settingIntent,1);
                  Handler handler4 = new Handler();
@@ -458,7 +458,7 @@ public class MainTest extends AppCompatActivity implements View.OnClickListener 
                  }, 200);
                 break;
             case R.id.lin_help:
-                Intent intentHelp = new Intent(MainTest.this,HelpActivity.class);
+                Intent intentHelp = new Intent(MainPageActivity.this,HelpActivity.class);
                 startActivity(intentHelp);
 //                        startActivityForResult(intentHelp,1);
                 Handler handler6 = new Handler();
@@ -471,7 +471,7 @@ public class MainTest extends AppCompatActivity implements View.OnClickListener 
                 }, 200);
                break;
             case R.id.lin_contact_us:
-                Intent linAbout_Intent2 = new Intent(MainTest.this, AboutActivity.class);
+                Intent linAbout_Intent2 = new Intent(MainPageActivity.this, AboutActivity.class);
                 startActivity(linAbout_Intent2);
                 Handler handler = new Handler();
                 handler.postDelayed(new Runnable() {
@@ -492,14 +492,14 @@ public class MainTest extends AppCompatActivity implements View.OnClickListener 
                 setContentView(sideDrawer);
                 break;
             case R.id.fab_group:
-                Intent addgrp_intent = new Intent(MainTest.this,AddNewGroupActivity.class);
+                Intent addgrp_intent = new Intent(MainPageActivity.this,AddNewGroupActivity.class);
                 addgrp_intent.putExtra("GroupTitle", "نام گروه");
                 addgrp_intent.putExtra("selectedId",selectedId);
                 addgrp_intent.putExtra("type","group");
                 startActivity(addgrp_intent);
                 break;
             case R.id.fab_folder:
-                Intent addfld_intent = new Intent(MainTest.this,AddNewGroupActivity.class);
+                Intent addfld_intent = new Intent(MainPageActivity.this,AddNewGroupActivity.class);
                 addfld_intent.putExtra("GroupTitle", "نام پوشه");
                 addfld_intent.putExtra("selectedId",selectedId);
                 addfld_intent.putExtra("type","folder");

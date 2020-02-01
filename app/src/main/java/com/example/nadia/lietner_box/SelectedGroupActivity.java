@@ -120,7 +120,7 @@ public class SelectedGroupActivity extends AppCompatActivity implements View.OnC
         FloatingActionButton fabrev = (FloatingActionButton) findViewById(R.id.btn_fabrev);
         fabrev.setOnClickListener(this);
 
-        TextView menu = (TextView) findViewById(R.id.tv_db);
+        TextView menu = (TextView) findViewById(R.id.tv_back);
         menu.setTypeface(font);
         menu.setText(R.string.icon_back);
         menu.setOnClickListener(this);
@@ -273,7 +273,7 @@ public class SelectedGroupActivity extends AppCompatActivity implements View.OnC
                 addCardIntent.putExtra("Group_Id", grpId);
                 startActivity(addCardIntent);
                 break;
-            case R.id.tv_db:
+            case R.id.tv_back:
                 finish();
                 break;
             case R.id.flBack:

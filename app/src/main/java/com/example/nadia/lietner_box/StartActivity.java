@@ -1,24 +1,17 @@
 package com.example.nadia.lietner_box;
 
 import android.content.Intent;
-import android.database.Cursor;
-import android.database.sqlite.SQLiteDatabase;
 import android.graphics.Typeface;
 import android.os.Bundle;
 import android.os.Handler;
 import androidx.appcompat.app.AppCompatActivity;
-import android.util.Log;
-import android.view.View;
-import android.widget.Button;
+
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.example.nadia.lietner_box.bl.groups_bl;
 import com.example.nadia.lietner_box.bl.setting_bl;
 import com.example.nadia.lietner_box.lib.CustomException;
 import com.example.nadia.lietner_box.lib.date;
-import com.example.nadia.lietner_box.models.DaoMaster;
-import com.example.nadia.lietner_box.models.group;
 import com.example.nadia.lietner_box.models.setting;
 
 import java.util.Date;
@@ -65,7 +58,7 @@ public class StartActivity extends AppCompatActivity  {
         new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {
-                Intent mainIntent = new Intent(StartActivity.this, MainTest.class);
+                Intent mainIntent = new Intent(StartActivity.this, MainPageActivity.class);
                 startActivity(mainIntent);
                 finish();
             }
