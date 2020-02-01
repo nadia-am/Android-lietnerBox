@@ -101,7 +101,7 @@ public class MainPageActivity extends AppCompatActivity implements View.OnClickL
 
         sideDrawer = new RadSideDrawer(this);
         sideDrawer.setDrawerContent(R.layout.activity_main_drawer);
-        sideDrawer.setMainContent(R.layout.activity_main_test);
+        sideDrawer.setMainContent(R.layout.activity_main_page);
         sideDrawer.setDrawerLocation(DrawerLocation.RIGHT);
         sideDrawer.setDrawerSize((int) Util.getDimen(TypedValue.COMPLEX_UNIT_DIP, 300));
         setContentView(sideDrawer);

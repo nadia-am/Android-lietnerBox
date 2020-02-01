@@ -154,7 +154,7 @@ public class SortFileActivity  extends AppCompatActivity implements View.OnClick
         tvCrdNumTxtNum.setText(String.valueOf(Answer.size()));
         tvCrdNumTxtNum.setTypeface(BNazanin);
 
-        SwitchCompat sw_btn = (SwitchCompat) findViewById(R.id.switch1);
+        SwitchCompat sw_btn =  findViewById(R.id.switch1);
         check=false;
         sw_btn.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override

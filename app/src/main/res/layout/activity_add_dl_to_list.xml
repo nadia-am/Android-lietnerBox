@@ -1,188 +1,201 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:elastic="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:elastic="http://schemas.android.com/apk/res-auto">
+    android:background="@color/bg_gray">
 
     <RelativeLayout
-        android:orientation="horizontal"
+        android:id="@+id/rel_header"
         android:layout_width="match_parent"
         android:layout_height="50dp"
-        android:background="#8f5db7"
-        android:gravity="center|right"
-        android:layout_weight="0.001"
         android:layout_gravity="top"
-        android:id="@+id/rel_header">
+        android:layout_weight="0.001"
+        android:gravity="center|right"
+        android:orientation="horizontal">
+
         <TextView
+            android:id="@+id/tv_appName2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/tv_appName2"
-            android:textSize="20dp"
-            android:textStyle="bold"
-            android:textColor="#ffffff"
-            android:layout_gravity="center|right"
-            android:gravity="center_vertical|right|center_horizontal"
-            android:layout_marginRight="10dp"
             android:layout_alignParentRight="true"
-            android:layout_centerInParent="true" />
+            android:layout_centerInParent="true"
+            android:layout_gravity="center|right"
+            android:layout_marginRight="10dp"
+            android:gravity="center_vertical|right|center_horizontal"
+            android:textColor="#ffffff"
+            android:textSize="20dp"
+            android:textStyle="bold" />
+
         <FrameLayout
+            android:id="@+id/flBack"
             android:layout_width="50dp"
             android:layout_height="match_parent"
-            android:id="@+id/flBack"
-            android:layout_centerInParent="true"
             android:layout_alignParentLeft="true"
+            android:layout_centerInParent="true"
             android:gravity="left|center_vertical|center_horizontal">
+
             <TextView
+                android:id="@+id/tv_back"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:id="@+id/tv_back"
                 android:layout_alignParentLeft="true"
-                android:textSize="20dp"
-                android:textColor="#ffffff"
-                android:gravity="center_vertical|center_horizontal"
                 android:layout_centerInParent="true"
-                android:layout_gravity="center" />
+                android:layout_gravity="center"
+                android:gravity="center_vertical|center_horizontal"
+                android:textColor="@color/perple"
+                android:textSize="30sp" />
         </FrameLayout>
     </RelativeLayout>
 
     <LinearLayout
-        android:orientation="horizontal"
-        android:layout_width="fill_parent"
-        android:background="@drawable/gradient_reg"
-        android:layout_alignParentTop="false"
-        android:layout_alignParentLeft="false"
-        android:layout_alignParentStart="false"
         android:id="@+id/lin_shadow"
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
         android:layout_below="@+id/rel_header"
-        android:layout_height="1dp">
-    </LinearLayout>
+        android:layout_alignParentStart="false"
+        android:layout_alignParentLeft="false"
+        android:layout_alignParentTop="false"
+        android:orientation="horizontal"
+        android:visibility="invisible"></LinearLayout>
 
     <ScrollView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
         android:id="@+id/scrollView"
-        android:background="#EEEEEE"
-        android:layout_below="@+id/lin_shadow">
-    <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_below="@+id/lin_shadow"
-        android:background="#EEEEEE"
-        android:id="@+id/rel_m">
+        android:layout_below="@+id/lin_shadow">
 
-
-        <LinearLayout
-            android:orientation="vertical"
+        <RelativeLayout
+            android:id="@+id/rel_m"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:id="@+id/lin_other"
-            android:visibility="visible">
-            <RelativeLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:paddingLeft="10dp"
-                android:paddingRight="15dp"
-                android:paddingTop="40dp"
-                android:id="@+id/rel_name">
+            android:layout_below="@+id/lin_shadow">
 
-                <TextView
-                    android:text="TextView"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/tv_folder_n"
-                    android:layout_alignParentRight="true"
-                    android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/tv_folder_n"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="50dp"
+                android:text="TextView" />
+
+            <RelativeLayout
+                android:id="@+id/rel_folderName"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_below="@id/tv_folder_n"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="50dp"
+                android:background="@drawable/round_rec_et">
 
                 <EditText
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:inputType="textPersonName"
-                    android:text="Name"
                     android:id="@+id/et_folder_n"
-                    android:layout_toLeftOf="@+id/tv_folder_n"
-                    android:layout_alignBaseline="@+id/tv_folder_n"
-                    android:ems="10"
-                    android:background="@drawable/et_background"
-                    android:layout_margin="5dp"
-                    android:padding="5dp" />
-
-            </RelativeLayout>
-            <RelativeLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:paddingLeft="10dp"
-                android:paddingRight="15dp"
-                android:paddingTop="40dp"
-                android:id="@+id/rel_grps_name">
-
-                <TextView
-                    android:text="TextView"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:id="@+id/tv_grps_n"
-                    android:layout_alignParentRight="true"
-                    android:textSize="18sp" />
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:width="360dp"
+                    android:height="60dp"
+                    android:background="@null"
+                    android:gravity="center|center_horizontal|center_vertical" />
+
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/tv_grps_n"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/rel_folderName"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="50dp"
+                android:layout_marginRight="50dp"
+                android:text="TextView" />
+
+            <RelativeLayout
+                android:id="@+id/rel_groupName"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_below="@id/tv_grps_n"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="50dp"
+                android:background="@drawable/round_rec_et">
 
                 <EditText
+                    android:id="@+id/et_grps_n"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:inputType="textPersonName"
-                    android:text="Name"
-                    android:id="@+id/et_grps_n"
-                    android:layout_toLeftOf="@+id/tv_grps_n"
-                    android:layout_alignBaseline="@+id/tv_grps_n"
-                    android:ems="10"
-                    android:background="@drawable/et_background"
-                    android:layout_margin="5dp"
-                    android:padding="5dp" />
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:width="360dp"
+                    android:height="60dp"
+                    android:background="@null"
+                    android:gravity="center|center_horizontal|center_vertical" />
 
             </RelativeLayout>
+
             <RelativeLayout
+                android:id="@+id/rel_info"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:id="@+id/rel_info"
-                android:layout_margin="20dp"
+                android:layout_below="@+id/rel_groupName"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginRight="50dp"
+                android:layout_marginBottom="20dp"
                 android:paddingTop="20dp"
-                android:paddingBottom="20dp"
-                android:paddingRight="10dp">
+                android:paddingRight="10dp"
+                android:paddingBottom="20dp">
 
                 <TextView
-                    android:text="TextView"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
                     android:id="@+id/tv_amountOfGrp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
                     android:layout_alignParentRight="true"
-                    android:layout_margin="10dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginRight="50dp"
+                    android:layout_marginBottom="10dp"
+                    android:text="TextView"
                     android:textSize="18sp" />
 
                 <TextView
-                    android:text="TextView"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
                     android:id="@+id/tv_amountOfGrp_num"
-                    android:layout_alignParentRight="false"
-                    android:layout_toLeftOf="@+id/tv_amountOfGrp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
                     android:layout_alignBaseline="@+id/tv_amountOfGrp"
+                    android:layout_alignParentRight="false"
                     android:layout_margin="10dp"
+                    android:layout_toLeftOf="@+id/tv_amountOfGrp"
+                    android:text="TextView"
                     android:textSize="18sp" />
 
                 <TextView
-                    android:text="TextView"
+                    android:id="@+id/tvdescript"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:id="@+id/tvdescript"
                     android:layout_below="@+id/tv_amountOfGrp"
                     android:layout_alignParentRight="true"
                     android:layout_margin="10dp"
+                    android:text="TextView"
                     android:textColor="#4CAF50"
                     android:textSize="18sp"
                     android:visibility="invisible" />
             </RelativeLayout>
+
             <RelativeLayout
+                android:id="@+id/rel_btn"
+                android:layout_below="@+id/rel_info"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:id="@+id/rel_btn">
+                android:layout_height="match_parent">
 
                 <RelativeLayout
                     android:layout_width="wrap_content"
@@ -191,69 +204,75 @@
                     android:layout_centerVertical="true">
 
                     <Button
-                        android:text="Button"
+                        android:id="@+id/btn_cancel"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:id="@+id/btn_cancel"
-                        android:layout_centerVertical="false"
                         android:layout_centerHorizontal="false"
+                        android:layout_centerVertical="false"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginEnd="5dp"
+                        android:layout_marginBottom="5dp"
                         android:background="@drawable/round_regtangle"
+                        android:text="Button"
                         android:textColor="#ffffff"
-                        android:layout_margin="5dp"
                         android:textSize="18sp" />
 
                     <Button
-                        android:text="Button"
+                        android:id="@+id/btn_ok"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:id="@+id/btn_ok"
+                        android:layout_alignBaseline="@+id/btn_cancel"
                         android:layout_centerHorizontal="false"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginEnd="5dp"
+                        android:layout_marginBottom="5dp"
                         android:layout_toRightOf="@+id/btn_cancel"
                         android:background="@drawable/round_regtangle"
+                        android:text="Button"
                         android:textColor="#ffffff"
-                        android:layout_alignBaseline="@+id/btn_cancel"
-                        android:layout_margin="5dp"
                         android:textSize="18sp" />
                 </RelativeLayout>
 
             </RelativeLayout>
-        </LinearLayout>
 
-    </RelativeLayout>
+        </RelativeLayout>
 
     </ScrollView>
 
     <RelativeLayout
+        android:id="@+id/rel_loading"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:id="@+id/rel_loading"
         android:background="#8f5db7"
         android:visibility="invisible">
 
         <TextView
-            android:text="TextView"
+            android:id="@+id/tv_wait"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/tv_wait"
-            android:layout_alignParentRight="false"
             android:layout_alignParentTop="false"
-            android:layout_margin="30dp"
-            android:textColor="#ffffff"
-            android:textSize="18sp"
             android:layout_alignParentEnd="false"
+            android:layout_alignParentRight="false"
             android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
             android:layout_centerVertical="false"
-            android:layout_centerHorizontal="true" />
+            android:layout_margin="30dp"
+            android:text="TextView"
+            android:textColor="#ffffff"
+            android:textSize="18sp" />
 
         <is.arontibo.library.ElasticDownloadView
             android:id="@+id/elastic_download_view"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerInParent="true"
-            android:visibility="visible"
             android:layout_centerHorizontal="true"
             android:layout_centerVertical="true"
-            elastic:backgroundColor="#8f5db7"/>
+            android:visibility="visible"
+            elastic:backgroundColor="#8f5db7" />
     </RelativeLayout>
 
 </RelativeLayout>

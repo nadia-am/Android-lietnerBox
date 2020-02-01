@@ -1,399 +1,396 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent" android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:baselineAligned="false">
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_gray"
+    android:baselineAligned="false"
+    android:orientation="vertical">
 
     <RelativeLayout
-        android:orientation="horizontal"
+        android:id="@+id/rl2"
         android:layout_width="match_parent"
         android:layout_height="50dp"
-        android:background="#8f5db7"
-        android:gravity="center|right"
+        android:layout_alignParentTop="true"
         android:layout_gravity="top"
         android:layout_weight="1"
-        android:id="@+id/rl2"
-        android:layout_alignParentTop="true">
+        android:gravity="center|right"
+        android:orientation="horizontal">
 
         <TextView
+            android:id="@+id/tv_appName4"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/tv_appName4"
-            android:textStyle="bold"
-            android:textSize="20dp"
-            android:textColor="#ffffff"
             android:layout_alignParentRight="true"
-            android:gravity="center_vertical|center_horizontal|right"
+            android:layout_centerInParent="true"
             android:layout_marginRight="10dp"
-            android:layout_centerInParent="true" />
+            android:gravity="center_vertical|center_horizontal|right"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            android:visibility="invisible" />
 
         <FrameLayout
+            android:id="@+id/fl_finish_r"
             android:layout_width="60dp"
             android:layout_height="match_parent"
-            android:layout_centerVertical="true"
-            android:layout_alignParentLeft="true"
             android:layout_alignParentStart="true"
-            android:id="@+id/fl_finish_r"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
             android:visibility="invisible">
 
             <TextView
+                android:id="@+id/tv_edit"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:id="@+id/tv_edit"
                 android:layout_alignParentLeft="true"
-                android:textColor="#ffffff"
+                android:layout_gravity="center"
+                android:layout_marginTop="5dp"
+                android:gravity="fill_horizontal|left|center_vertical"
+                android:textColor="@color/perple"
                 android:textSize="20dp"
                 android:textStyle="bold"
-                android:gravity="fill_horizontal|left|center_vertical"
-                android:layout_gravity="center"
                 android:visibility="invisible" />
         </FrameLayout>
 
     </RelativeLayout>
 
     <LinearLayout
-        android:orientation="horizontal"
+        android:id="@+id/lin"
         android:layout_width="fill_parent"
         android:layout_height="4dp"
-        android:background="@drawable/gradient_reg"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
-        android:id="@+id/lin"></LinearLayout>
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:orientation="horizontal"
+        android:visibility="invisible"></LinearLayout>
 
     <RelativeLayout
+        android:id="@+id/relparent"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_weight="9"
-        android:id="@+id/relparent"
-        android:background="#f5f5f5">
+        android:layout_weight="9">
 
-            <LinearLayout
-                android:orientation="vertical"
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/lin_noti"
+            android:gravity="bottom"
+            android:orientation="vertical">
+
+
+            <RelativeLayout
+                android:id="@+id/rel1"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_above="@+id/lin_noti"
-                android:background="#EEEEEE"
-                android:gravity="bottom">
+                android:layout_height="wrap_content"
+                android:layout_above="@+id/rel2"
+                android:layout_alignParentTop="true"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginBottom="10dp"
+                android:layout_weight="1"
+                android:background="@drawable/layershadow"
+                android:minHeight="200dp">
 
+                <ScrollView
+                    android:id="@+id/scrollView3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:fadeScrollbars="false">
 
-
-                <RelativeLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:id="@+id/rel1"
-                    android:layout_above="@+id/rel2"
-                    android:layout_alignParentTop="true"
-                    android:background="@drawable/layershadow"
-                    android:layout_marginRight="20dp"
-                    android:layout_marginLeft="20dp"
-                    android:layout_marginBottom="10dp"
-                    android:layout_marginTop="20dp"
-                    android:minHeight="200dp">
-
-                    <ScrollView
-                        android:layout_width="wrap_content"
-                        android:layout_height="match_parent"
-                        android:id="@+id/scrollView3"
-                        android:fadeScrollbars="false">
-                        <RelativeLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent">
-
-
-
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:id="@+id/tv_questionR"
-                                android:layout_alignParentRight="true"
-                                android:textSize="22dp"
-                                android:textStyle="bold"
-                                android:layout_alignParentTop="true"
-                                android:layout_marginLeft="10dp"
-                                android:layout_marginRight="40dp"
-                                android:layout_marginBottom="20dp"
-                                android:layout_marginTop="10dp"
-                                android:textColor="#0277BD" />
-
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:id="@+id/tv_questionRR"
-                                android:layout_alignBottom="@+id/tv_questionR"
-                                android:layout_toLeftOf="@+id/tv_questionR"
-                                android:textColor="#0277BD"
-                                android:textSize="22dp"
-                                android:textStyle="bold"
-                                android:layout_alignBaseline="@+id/tv_questionR" />
-
-                            <TextView
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:id="@+id/tv_questionR2"
-                                android:layout_marginLeft="20dp"
-                                android:layout_marginRight="20dp"
-                                android:layout_alignParentRight="true"
-                                android:layout_below="@+id/tv_questionR"
-                                android:layout_marginBottom="10dp"
-                                android:foregroundGravity="center_vertical|center"
-                                android:gravity="center_vertical|center_horizontal"
-                                android:layout_marginTop="5dp"
-                                android:textSize="16dp" />
-
-                            <EditText
+                    <RelativeLayout
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:id="@+id/et_questionR2"
-                        android:layout_below="@+id/tv_questionR"
-                        android:layout_marginLeft="20dp"
-                        android:layout_marginTop="5dp"
-                        android:layout_marginRight="20dp"
-                        android:layout_marginBottom="10dp"
-                        android:layout_alignParentRight="true"
-                        android:foregroundGravity="center_vertical|center"
-                        android:gravity="center_vertical|center_horizontal"
-                        android:textIsSelectable="false"
-                        android:visibility="invisible"
-                                android:textSize="16dp" />
-
-                     </RelativeLayout>
+                        android:layout_height="match_parent">
 
 
+                        <TextView
+                            android:id="@+id/tv_questionR"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentTop="true"
+                            android:layout_alignParentRight="true"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginRight="40dp"
+                            android:layout_marginBottom="20dp"
+                            android:textColor="#0277BD"
+                            android:textSize="22dp"
+                            android:textStyle="bold" />
 
-                    </ScrollView>
-                    <TextView
-                        android:text="TextView"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:id="@+id/tv_number"
-                        android:textSize="18sp"
-                        android:textStyle="bold"
-                        android:textColor="#ffffff"
-                        android:layout_alignParentBottom="true"
-                        android:background="#0277BD"
-                        android:padding="2dp"
-                        android:layout_centerVertical="false"
-                        android:gravity="center_horizontal"
-                        android:layout_marginLeft="2dp"
-                        android:layout_marginRight="2dp"
-                        android:layout_marginBottom="2dp"
-                        android:layout_marginEnd="2dp"
-                        android:layout_marginStart="2dp"
-                        android:layout_marginTop="2dp" />
+                        <TextView
+                            android:id="@+id/tv_questionRR"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignBaseline="@+id/tv_questionR"
+                            android:layout_alignBottom="@+id/tv_questionR"
+                            android:layout_toLeftOf="@+id/tv_questionR"
+                            android:textColor="#0277BD"
+                            android:textSize="22dp"
+                            android:textStyle="bold" />
 
-                </RelativeLayout>
-
-
-                <RelativeLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/rel2"
-                    android:layout_above="@+id/lin_noti"
-                    android:layout_weight="1"
-                    android:visibility="invisible"
-                    android:background="@drawable/layershadow"
-                    android:padding="2dp"
-                    android:layout_marginLeft="20dp"
-                    android:layout_marginRight="20dp"
-                    android:layout_marginTop="10dp"
-                    android:layout_marginBottom="20dp"
-                    android:nestedScrollingEnabled="true">
-
-                    <ScrollView
-                        android:layout_width="wrap_content"
-                        android:layout_height="match_parent"
-                        android:id="@+id/scrollView4"  >
-                        <RelativeLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent">
-
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:id="@+id/tv_answerR"
-                                android:layout_alignParentRight="true"
-                                android:textSize="22dp"
-                                android:textStyle="bold"
-                                android:layout_marginLeft="10dp"
-                                android:layout_marginTop="10dp"
-                                android:layout_marginRight="40dp"
-                                android:textColor="#009688" />
-
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:id="@+id/tv_answerRR"
-                                android:layout_alignBottom="@+id/tv_answerR"
-                                android:layout_toLeftOf="@+id/tv_answerR"
-                                android:textSize="22dp"
-                                android:textColor="#009688"
-                                android:textStyle="bold"
-                                android:layout_alignBaseline="@+id/tv_answerR" />
-
-                            <TextView
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:id="@+id/tv_answerR2"
-                                android:layout_below="@+id/tv_answerR"
-                                android:layout_marginLeft="20dp"
-                                android:layout_marginTop="5dp"
-                                android:layout_marginRight="20dp"
-                                android:layout_marginBottom="10dp"
-                                android:layout_alignParentRight="true"
-                                android:gravity="center_vertical|center_horizontal"
-                                android:minHeight="200dp"
-                                android:textSize="16dp" />
-
-                            <EditText
+                        <TextView
+                            android:id="@+id/tv_questionR2"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:id="@+id/et_answerR2"
-                            android:layout_below="@+id/tv_answerR"
+                            android:layout_below="@+id/tv_questionR"
+                            android:layout_alignParentRight="true"
                             android:layout_marginLeft="20dp"
                             android:layout_marginTop="5dp"
                             android:layout_marginRight="20dp"
                             android:layout_marginBottom="10dp"
-                            android:layout_alignParentRight="true"
+                            android:foregroundGravity="center_vertical|center"
                             android:gravity="center_vertical|center_horizontal"
-                            android:visibility="invisible"
-                                android:minHeight="200dp"
-                                android:textSize="16dp" />
+                            android:textSize="16dp" />
+
+                        <EditText
+                            android:id="@+id/et_questionR2"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/tv_questionR"
+                            android:layout_alignParentRight="true"
+                            android:layout_marginLeft="20dp"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginRight="20dp"
+                            android:layout_marginBottom="10dp"
+                            android:foregroundGravity="center_vertical|center"
+                            android:gravity="center_vertical|center_horizontal"
+                            android:textIsSelectable="false"
+                            android:textSize="16dp"
+                            android:visibility="invisible" />
 
                     </RelativeLayout>
-                    </ScrollView>
 
-                </RelativeLayout>
 
-            </LinearLayout>
+                </ScrollView>
 
-        <LinearLayout
-            android:orientation="horizontal"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_alignParentBottom="true"
-            android:gravity="center"
-            android:id="@+id/lin_first"
-            android:background="#EEEEEE"
-            android:padding="1dp"
-            android:layout_marginTop="10dp"
-            android:layout_marginLeft="20dp"
-            android:layout_marginRight="20dp">
+                <TextView
+                    android:id="@+id/tv_number"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerVertical="false"
+                    android:layout_marginStart="2dp"
+                    android:layout_marginLeft="2dp"
+                    android:layout_marginTop="2dp"
+                    android:layout_marginEnd="2dp"
+                    android:layout_marginRight="2dp"
+                    android:layout_marginBottom="2dp"
+                    android:background="#0277BD"
+                    android:gravity="center_horizontal"
+                    android:padding="2dp"
+                    android:text="TextView"
+                    android:textColor="#ffffff"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
 
-            <Button
-                android:layout_width="wrap_content"
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:id="@+id/rel2"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:id="@+id/btn_before"
+                android:layout_above="@+id/lin_noti"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginBottom="20dp"
                 android:layout_weight="1"
-                android:layout_margin="8dp"
-                android:background="@drawable/round_regtangle"
-                android:textSize="18dp"
-                android:textColor="#ffffff"
-                android:foregroundGravity="center_vertical|center_horizontal" />
+                android:background="@drawable/layershadow"
+                android:nestedScrollingEnabled="true"
+                android:padding="2dp"
+                android:visibility="invisible">
 
-            <Button
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/btn_answer"
-                android:layout_weight="1"
-                android:layout_margin="8dp"
-                android:background="@drawable/round_regtangle"
-                android:textSize="18dp"
-                android:textColor="#ffffff" />
+                <ScrollView
+                    android:id="@+id/scrollView4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent">
 
-            <Button
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/btn_refuse"
-                android:layout_weight="1"
-                android:layout_margin="8dp"
-                android:background="@drawable/round_regtangle"
-                android:textSize="18dp"
-                android:textColor="#ffffff"
-                android:foregroundGravity="center_vertical|center_horizontal" />
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <TextView
+                            android:id="@+id/tv_answerR"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginRight="40dp"
+                            android:textColor="#009688"
+                            android:textSize="22dp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/tv_answerRR"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignBaseline="@+id/tv_answerR"
+                            android:layout_alignBottom="@+id/tv_answerR"
+                            android:layout_toLeftOf="@+id/tv_answerR"
+                            android:textColor="#009688"
+                            android:textSize="22dp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/tv_answerR2"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/tv_answerR"
+                            android:layout_alignParentRight="true"
+                            android:layout_marginLeft="20dp"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginRight="20dp"
+                            android:layout_marginBottom="10dp"
+                            android:gravity="center_vertical|center_horizontal"
+                            android:minHeight="200dp"
+                            android:textSize="16dp" />
+
+                        <EditText
+                            android:id="@+id/et_answerR2"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/tv_answerR"
+                            android:layout_alignParentRight="true"
+                            android:layout_marginLeft="20dp"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginRight="20dp"
+                            android:layout_marginBottom="10dp"
+                            android:gravity="center_vertical|center_horizontal"
+                            android:minHeight="200dp"
+                            android:textSize="16dp"
+                            android:visibility="invisible" />
+
+                    </RelativeLayout>
+                </ScrollView>
+
+            </RelativeLayout>
 
         </LinearLayout>
 
         <LinearLayout
-            android:orientation="horizontal"
+            android:id="@+id/lin_first"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/lin_second"
-            android:visibility="invisible"
-            android:background="#EEEEEE"
-            android:padding="1dp"
             android:layout_alignParentBottom="true"
-            android:gravity="center"
             android:layout_marginLeft="20dp"
             android:layout_marginTop="10dp"
-            android:layout_marginRight="20dp">
+            android:layout_marginRight="20dp"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:padding="1dp">
 
             <Button
+                android:id="@+id/btn_before"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:layout_weight="1"
+                android:background="@drawable/round_regtangle"
+                android:foregroundGravity="center_vertical|center_horizontal"
+                android:textColor="#ffffff"
+                android:textSize="18dp" />
+
+            <Button
+                android:id="@+id/btn_answer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:layout_weight="1"
+                android:background="@drawable/round_regtangle"
+                android:textColor="#ffffff"
+                android:textSize="18dp" />
+
+            <Button
+                android:id="@+id/btn_refuse"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:layout_weight="1"
+                android:background="@drawable/round_regtangle"
+                android:foregroundGravity="center_vertical|center_horizontal"
+                android:textColor="#ffffff"
+                android:textSize="18dp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/lin_second"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="20dp"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:padding="1dp"
+            android:visibility="invisible">
+
+            <Button
                 android:id="@+id/btn_correct"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:layout_margin="8dp"
                 android:layout_weight="1"
                 android:background="@drawable/round_rec_green"
-                android:textSize="18dp"
-                android:textColor="#ffffff" />
+                android:textColor="#ffffff"
+                android:textSize="18dp" />
 
             <Button
+                android:id="@+id/btn_incorrect"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:id="@+id/btn_incorrect"
                 android:layout_margin="8dp"
                 android:layout_weight="1"
                 android:background="@drawable/round_rec_red"
-                android:textSize="18dp"
-                android:textColor="#ffffff" />
+                android:textColor="#ffffff"
+                android:textSize="18dp" />
 
             <Button
+                android:id="@+id/btn_refuse2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:id="@+id/btn_refuse2"
-                android:layout_weight="1"
                 android:layout_margin="8dp"
+                android:layout_weight="1"
                 android:background="@drawable/round_regtangle"
-                android:textSize="18dp"
-                android:textColor="#ffffff" />
+                android:textColor="#ffffff"
+                android:textSize="18dp" />
 
         </LinearLayout>
 
         <LinearLayout
-            android:orientation="horizontal"
+            android:id="@+id/linEdite"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/linEdite"
-            android:visibility="invisible"
-            android:background="#EEEEEE"
             android:layout_alignParentBottom="true"
-            android:gravity="center"
-            android:padding="2dp"
             android:layout_marginLeft="20dp"
+            android:layout_marginTop="10dp"
             android:layout_marginRight="20dp"
-            android:layout_marginTop="10dp">
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:padding="2dp"
+            android:visibility="invisible">
 
             <Button
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
                 android:id="@+id/btn_canelE"
-                android:layout_margin="8dp"
-                android:layout_weight="1"
-                android:background="@drawable/round_regtangle"
-                android:textSize="18dp"
-                android:textColor="#ffffff" />
-
-            <Button
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:id="@+id/btn_saveE"
-                android:layout_weight="1"
                 android:layout_margin="8dp"
+                android:layout_weight="1"
                 android:background="@drawable/round_regtangle"
-                android:textSize="18dp"
-                android:textColor="#ffffff" />
+                android:textColor="#ffffff"
+                android:textSize="18dp" />
+
+            <Button
+                android:id="@+id/btn_saveE"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:layout_weight="1"
+                android:background="@drawable/round_regtangle"
+                android:textColor="#ffffff"
+                android:textSize="18dp" />
         </LinearLayout>
 
     </RelativeLayout>
