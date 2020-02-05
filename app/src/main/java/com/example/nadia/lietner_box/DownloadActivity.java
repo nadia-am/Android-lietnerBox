@@ -12,6 +12,7 @@ import android.util.Log;
 import android.view.KeyEvent;
 import android.view.View;
 import android.widget.FrameLayout;
+import android.widget.GridView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -129,10 +130,16 @@ public class DownloadActivity extends AppCompatActivity implements View.OnClickL
         back.setTypeface(font);
         back.setText(R.string.icon_back);
 
+        String[] osNameList = {"1100","504","اول دبیرستان", "دوم دبیرستان", "سوم دبیرستان" , "پیش دانشگاهی"};
+        int[] osImages = { R.drawable.onehundred,R.drawable.fiveofour ,
+                R.drawable.first , R.drawable.second , R.drawable.third , R.drawable.beforuni,};
+        GridView gridview = (GridView) findViewById(R.id.gridview);
+        gridview.setAdapter(new CustomAdapter(this, osNameList, osImages));
+
         FrameLayout flback = (FrameLayout) findViewById(R.id.flBack);
         flback.setOnClickListener(this);
 
-        //------------504----------------
+/*------------504----------------*/
         TextView tvfiveOfour = (TextView) findViewById(R.id.tv_fiveOfour);
         tvfiveOfour.setText(R.string.fof);
         tvfiveOfour.setTypeface(custom_font);
@@ -158,7 +165,7 @@ public class DownloadActivity extends AppCompatActivity implements View.OnClickL
         TextView tvfont = (TextView) findViewById(R.id.tv_font_add);
         tvfont.setText(R.string.add_to_list_f);
         tvfont.setTypeface(font);
-        //------------1100---------------
+/*------------1100---------------*/
         TextView tvhundred = (TextView) findViewById(R.id.tv_hundred);
         tvhundred.setText(R.string.hundred);
         tvhundred.setTypeface(custom_font);
@@ -211,7 +218,7 @@ public class DownloadActivity extends AppCompatActivity implements View.OnClickL
         TextView tvfont_list_fh = (TextView) findViewById(R.id.tv_font_List_fh);
         tvfont_list_fh.setText(R.string.add_to_list_f);
         tvfont_list_fh.setTypeface(font);
-        //------------high-school-2--------------
+        /*------------high-school-2--------------*/
         TextView tv2highschool = (TextView) findViewById(R.id.tv_secHighSchool);
         tv2highschool.setText(R.string.sechighSchool);
         tv2highschool.setTypeface(custom_font);
@@ -237,7 +244,7 @@ public class DownloadActivity extends AppCompatActivity implements View.OnClickL
         TextView tvfont_list_secoundhs = (TextView) findViewById(R.id.tv_font_List_secoundhs);
         tvfont_list_secoundhs.setText(R.string.add_to_list_f);
         tvfont_list_secoundhs.setTypeface(font);
-        //------------high-school-3--------------
+        /*------------high-school-3--------------*/
         TextView tv3highschool = (TextView) findViewById(R.id.tv_thirdHighSchool);
         tv3highschool.setText(R.string.thirdhighSchool);
         tv3highschool.setTypeface(custom_font);
@@ -263,7 +270,7 @@ public class DownloadActivity extends AppCompatActivity implements View.OnClickL
         TextView tvfont_list_thirdhs = (TextView) findViewById(R.id.tv_font_List_thirdhs);
         tvfont_list_thirdhs.setText(R.string.add_to_list_f);
         tvfont_list_thirdhs.setTypeface(font);
-        //------------high-school-pish--------------
+        /*------------high-school-pish--------------*/
         TextView tvpish = (TextView) findViewById(R.id.tv_pish);
         tvpish.setText(R.string.forthhighSchool);
         tvpish.setTypeface(custom_font);
@@ -289,7 +296,7 @@ public class DownloadActivity extends AppCompatActivity implements View.OnClickL
         TextView tvfont_list_pish = (TextView) findViewById(R.id.tv_font_List_pish);
         tvfont_list_pish.setText(R.string.add_to_list_f);
         tvfont_list_pish.setTypeface(font);
-        //---------------country-----------------
+        /*--------------country-----------------*/
         TextView tvcountry = (TextView) findViewById(R.id.tv_country);
         tvcountry.setText(R.string.country);
         tvcountry.setTypeface(custom_font);

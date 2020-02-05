@@ -24,7 +24,8 @@
             android:gravity="center_vertical|right|center_horizontal"
             android:textColor="#ffffff"
             android:textSize="20dp"
-            android:textStyle="bold" />
+            android:textStyle="bold"
+            android:visibility="invisible" />
 
         <FrameLayout
             android:id="@+id/flBack"
@@ -42,9 +43,8 @@
                 android:layout_centerInParent="true"
                 android:layout_gravity="center"
                 android:layout_marginTop="5dp"
-                android:background="@color/perple"
                 android:gravity="center_vertical|center_horizontal"
-                android:textColor="#ffffff"
+                android:textColor="@color/perple"
                 android:textSize="30sp" />
         </FrameLayout>
     </RelativeLayout>
@@ -65,14 +65,16 @@
         android:id="@+id/scrollView"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_below="@+id/lin_shadow">
+        android:layout_below="@+id/lin_shadow"
+        android:visibility="gone">
 
         <RelativeLayout
             android:id="@+id/rel_main"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_below="@+id/lin_shadow"
-            android:gravity="center_horizontal">
+            android:gravity="center_horizontal"
+            android:visibility="visible">
 
             <RelativeLayout
                 android:id="@+id/rel_fiveOfour"
@@ -744,6 +746,20 @@
 
         </RelativeLayout>
 
+
     </ScrollView>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <GridView
+            android:id="@+id/gridview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:horizontalSpacing="10dp"
+            android:numColumns="2"
+            android:verticalSpacing="20dp" />
+    </RelativeLayout>
 
 </RelativeLayout>
