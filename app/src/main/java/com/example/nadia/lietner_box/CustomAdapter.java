@@ -1,6 +1,13 @@
 package com.example.nadia.lietner_box;
 
 import android.content.Context;
+import android.graphics.Bitmap;
+import android.graphics.BitmapShader;
+import android.graphics.Canvas;
+import android.graphics.Paint;
+import android.graphics.RectF;
+import android.graphics.Shader;
+import android.graphics.drawable.BitmapDrawable;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -42,6 +49,7 @@ public class CustomAdapter extends BaseAdapter {
     public class Holder
     {
         TextView os_text;
+        TextView tv_price;
         ImageView os_img;
     }
     @Override
@@ -49,15 +57,24 @@ public class CustomAdapter extends BaseAdapter {
         Holder holder=new Holder();
         View rowView;
 
+        //TODO set font to textview
         rowView = inflater.inflate(R.layout.gridlayout, null);
         holder.os_text = rowView.findViewById(R.id.text);
         holder.os_img = rowView.findViewById(R.id.img);
 
         holder.os_text.setText(result[position]);
-        holder.os_img.setImageResource(imageId[position]);
+        holder.tv_price.setText("100 تومان");
 
+        Bitmap mbitmap=((BitmapDrawable) context.getResources().getDrawable(imageId[position])).getBitmap();
+        Bitmap imageRounded=Bitmap.createBitmap(mbitmap.getWidth(), mbitmap.getHeight(), mbitmap.getConfig());
+        Canvas canvas=new Canvas(imageRounded);
+        Paint mpaint=new Paint();
+        mpaint.setAntiAlias(true);
+        mpaint.setShader(new BitmapShader(mbitmap, Shader.TileMode.CLAMP, Shader.TileMode.CLAMP));
+        canvas.drawRoundRect((new RectF(0, 0, mbitmap.getWidth(), mbitmap.getHeight())), 200, 200, mpaint); // Round Image Corner 100 100 100 100
+        holder.os_img.setImageBitmap(imageRounded);
 
-
+        
         return rowView;
     }
 
