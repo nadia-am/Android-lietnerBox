@@ -75,12 +75,6 @@ public class DownloadActivity extends AppCompatActivity implements View.OnClickL
 
     // Does the user have the premium upgrade?
     boolean mIsPremium = false;
-    boolean mIsPremium_504 = false;
-    boolean mIsPremium_1100 = false;
-    boolean mIsPremium_first = false;
-    boolean mIsPremium_second = false;
-    boolean mIsPremium_third = false;
-    boolean mIsPremium_pish = false;
 
     // (arbitrary) request code for the myPurchase flow
     static final int RC_REQUEST = 10001;
@@ -130,11 +124,11 @@ public class DownloadActivity extends AppCompatActivity implements View.OnClickL
         back.setTypeface(font);
         back.setText(R.string.icon_back);
 
-        String[] osNameList = {"1100","504","اول دبیرستان", "دوم دبیرستان", "سوم دبیرستان" , "پیش دانشگاهی"};
-        int[] osImages = { R.drawable.onehundred,R.drawable.fiveofour ,
-                R.drawable.first , R.drawable.second , R.drawable.third , R.drawable.beforuni,};
-        GridView gridview = (GridView) findViewById(R.id.gridview);
-        gridview.setAdapter(new CustomAdapter(this, osNameList, osImages));
+//        String[] osNameList = {"1100","504","اول دبیرستان", "دوم دبیرستان", "سوم دبیرستان" , "پیش دانشگاهی"};
+//        int[] osImages = { R.drawable.onehundred,R.drawable.fiveofour ,
+//                R.drawable.first , R.drawable.second , R.drawable.third , R.drawable.beforuni,};
+//        GridView gridview = (GridView) findViewById(R.id.gridview);
+//        gridview.setAdapter(new CustomAdapter(this, osNameList, osImages));
 
         FrameLayout flback = (FrameLayout) findViewById(R.id.flBack);
         flback.setOnClickListener(this);
@@ -380,7 +374,7 @@ public class DownloadActivity extends AppCompatActivity implements View.OnClickL
                     }
                 }});
         }catch (Error e){
-            Toast.makeText(getApplicationContext(),"عمل اتصال به سرویس با خطا مواجع شد!دوباره تلاش کنید", Toast.LENGTH_LONG).show();
+            Toast.makeText(getApplicationContext(),"عمل اتصال به سرویس بازار با خطا مواجع شد!دوباره تلاش کنید", Toast.LENGTH_LONG).show();
             dialog.dismiss();
         }
     }
@@ -524,7 +518,7 @@ public class DownloadActivity extends AppCompatActivity implements View.OnClickL
                 if (mymethod.IsNetworkConnected()){
                     dialog = new SpotsDialog(DownloadActivity.this);
                     dialog.show();
-                    url="http://favanaco.com/wp-content/uploads/2016/12/504.csv";
+                    url="http://favanaco.com/wp-content/uploads/2016/11/504.csv";
                     if ( mHelper!= null) mHelper.flagEndAsync();
                     mHelper.launchPurchaseFlow(DownloadActivity.this, SKU_504, RC_REQUEST, mPurchaseFinishedListener, "payload-504");
                 }else {
@@ -547,7 +541,7 @@ public class DownloadActivity extends AppCompatActivity implements View.OnClickL
                 if (mymethod.IsNetworkConnected()){
                     dialog = new SpotsDialog(DownloadActivity.this);
                     dialog.show();
-                    url="http://favanaco.com/wp-content/uploads/2017/02/1100.csv";
+                    url="http://favanaco.com/wp-content/uploads/2016/11/1100.csv";
                     if ( mHelper!= null) mHelper.flagEndAsync();
                     mHelper.launchPurchaseFlow(DownloadActivity.this, SKU_1100, RC_REQUEST, mPurchaseFinishedListener, "payload-1100");
                 }else {
@@ -569,7 +563,7 @@ public class DownloadActivity extends AppCompatActivity implements View.OnClickL
                 if (mymethod.IsNetworkConnected()){
                     dialog = new SpotsDialog(DownloadActivity.this);
                     dialog.show();
-                    url="http://favanaco.com/wp-content/uploads/2017/02/first.csv";
+                    url="http://favanaco.com/wp-content/uploads/2016/11/first.csv";
                     if ( mHelper!= null) mHelper.flagEndAsync();
                     mHelper.launchPurchaseFlow(DownloadActivity.this, SKU_first, RC_REQUEST, mPurchaseFinishedListener, "payload-first");
                 }else {
@@ -591,7 +585,7 @@ public class DownloadActivity extends AppCompatActivity implements View.OnClickL
                 if (mymethod.IsNetworkConnected()){
                     dialog = new SpotsDialog(DownloadActivity.this);
                     dialog.show();
-                    url="http://favanaco.com/wp-content/uploads/2017/02/second.csv";
+                    url="http://favanaco.com/wp-content/uploads/2016/11/second.csv";
                     if ( mHelper!= null) mHelper.flagEndAsync();
                     mHelper.launchPurchaseFlow(DownloadActivity.this, SKU_second, RC_REQUEST, mPurchaseFinishedListener, "payload-second");
                 }else {
@@ -613,7 +607,7 @@ public class DownloadActivity extends AppCompatActivity implements View.OnClickL
                 if (mymethod.IsNetworkConnected()){
                     dialog = new SpotsDialog(DownloadActivity.this);
                     dialog.show();
-                    url="http://favanaco.com/wp-content/uploads/2017/02/third.csv";
+                    url="http://favanaco.com/wp-content/uploads/2016/11/third.csv";
                     if ( mHelper!= null) mHelper.flagEndAsync();
                     mHelper.launchPurchaseFlow(DownloadActivity.this, SKU_third, RC_REQUEST, mPurchaseFinishedListener, "payload-third");
                 }else {
@@ -635,7 +629,7 @@ public class DownloadActivity extends AppCompatActivity implements View.OnClickL
                 if (mymethod.IsNetworkConnected()){
                     dialog = new SpotsDialog(DownloadActivity.this);
                     dialog.show();
-                    url="http://favanaco.com/wp-content/uploads/2017/02/pish.csv";
+                    url="http://favanaco.com/wp-content/uploads/2016/11/pish.csv";
                     if ( mHelper!= null) mHelper.flagEndAsync();
                     mHelper.launchPurchaseFlow(DownloadActivity.this, SKU_pish, RC_REQUEST, mPurchaseFinishedListener, "payload-pish");
                 }else {
