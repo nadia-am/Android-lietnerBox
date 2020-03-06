@@ -2,7 +2,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     package="com.example.nadia.lietner_box"
-    android:versionCode="17"
+    android:versionCode="18"
     android:installLocation="auto">
 
     <!-- permission required to use Alarm Manager -->
@@ -39,7 +39,7 @@
         <activity android:name=".SelectedGroupActivity"  ></activity>
         <activity android:name=".AddNewCardActivity" ></activity>
         <activity android:name=".Review1Activity" ></activity>
-        <activity android:name=".MainActivity" ></activity>
+<!--        <activity android:name=".MainActivity" ></activity>-->
         <activity android:name=".HelpActivity"></activity>
         <activity android:name=".ShowCards"></activity>
         <activity android:name=".ReviewReviewable"></activity>
