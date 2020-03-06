@@ -131,8 +131,8 @@
                                     android:id="@+id/tv_price504"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
-                                    android:layout_weight="1"
-                                    android:text="TextView" />
+                                    android:layout_marginRight="5dp"
+                                    android:layout_weight="1" />
 
                                 <TextView
                                     android:id="@+id/tv_fiveOfour"
@@ -267,6 +267,7 @@
                                     android:id="@+id/tv_price1100"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
+                                    android:layout_marginRight="5dp"
                                     android:layout_weight="1"
                                     android:text="TextView" />
 
@@ -399,6 +400,7 @@
                                     android:id="@+id/tv_pricefirst"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
+                                    android:layout_marginRight="5dp"
                                     android:layout_weight="1"
                                     android:text="TextView" />
 
@@ -524,6 +526,7 @@
                                     android:id="@+id/tv_pricesec"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
+                                    android:layout_marginRight="5dp"
                                     android:layout_weight="1"
                                     android:text="TextView" />
 
@@ -656,6 +659,7 @@
                                     android:id="@+id/tv_pricethird"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
+                                    android:layout_marginRight="5dp"
                                     android:layout_weight="1"
                                     android:text="TextView" />
 
@@ -781,6 +785,7 @@
                                     android:id="@+id/tv_pricepish"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
+                                    android:layout_marginRight="5dp"
                                     android:layout_weight="1"
                                     android:text="TextView" />
 
