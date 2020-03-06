@@ -100,6 +100,7 @@
                         <androidx.cardview.widget.CardView
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
+                            android:layout_centerHorizontal="true"
                             android:layout_marginBottom="15dp"
                             app:cardCornerRadius="5dp">
 
@@ -119,20 +120,12 @@
                             </androidx.cardview.widget.CardView>
 
 
-
                             <LinearLayout
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_gravity="bottom|center_horizontal"
                                 android:layout_marginBottom="20dp"
                                 android:orientation="horizontal">
-
-                                <TextView
-                                    android:id="@+id/tv_price504"
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:layout_marginRight="5dp"
-                                    android:layout_weight="1" />
 
                                 <TextView
                                     android:id="@+id/tv_fiveOfour"
@@ -149,13 +142,14 @@
                             android:layout_height="wrap_content"
                             android:layout_alignParentBottom="true"
                             android:layout_centerHorizontal="true"
-                            app:cardBackgroundColor="@color/nullcolor"
+                            app:cardBackgroundColor="@android:color/transparent"
+                            app:cardCornerRadius="20dp"
                             app:cardElevation="2dp">
 
                             <LinearLayout
                                 android:id="@+id/lin_addList_fof"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
                                 android:layout_alignParentBottom="true"
                                 android:layout_gravity="bottom"
                                 android:background="@drawable/round_backg_gray"
@@ -186,8 +180,8 @@
 
                             <LinearLayout
                                 android:id="@+id/lin_download_fof"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
                                 android:layout_alignParentBottom="true"
                                 android:layout_gravity="bottom"
                                 android:background="@drawable/round_bg_purple"
@@ -235,6 +229,7 @@
                         <androidx.cardview.widget.CardView
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
+                            android:layout_centerHorizontal="true"
                             android:layout_marginBottom="15dp"
                             app:cardCornerRadius="5dp">
 
@@ -255,21 +250,12 @@
                             </androidx.cardview.widget.CardView>
 
 
-
                             <LinearLayout
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_gravity="bottom|center_horizontal"
                                 android:layout_marginBottom="20dp"
                                 android:orientation="horizontal">
-
-                                <TextView
-                                    android:id="@+id/tv_price1100"
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:layout_marginRight="5dp"
-                                    android:layout_weight="1"
-                                    android:text="TextView" />
 
                                 <TextView
                                     android:id="@+id/tv_hundred"
@@ -286,12 +272,13 @@
                             android:layout_height="wrap_content"
                             android:layout_alignParentBottom="true"
                             android:layout_centerHorizontal="true"
-                            app:cardBackgroundColor="@color/nullcolor">
+                            app:cardBackgroundColor="@color/nullcolor"
+                            app:cardCornerRadius="20dp">
 
                             <LinearLayout
                                 android:id="@+id/lin_addList_h"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
                                 android:layout_alignParentBottom="true"
                                 android:layout_gravity="bottom"
                                 android:background="@drawable/round_backg_gray"
@@ -322,8 +309,8 @@
 
                             <LinearLayout
                                 android:id="@+id/lin_download_hundred"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
                                 android:layout_alignParentBottom="true"
                                 android:layout_gravity="bottom"
                                 android:background="@drawable/round_bg_purple"
@@ -378,6 +365,7 @@
                         <androidx.cardview.widget.CardView
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
+                            android:layout_centerHorizontal="true"
                             android:layout_marginBottom="15dp"
                             app:cardCornerRadius="5dp">
 
@@ -397,14 +385,6 @@
                                 android:orientation="horizontal">
 
                                 <TextView
-                                    android:id="@+id/tv_pricefirst"
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:layout_marginRight="5dp"
-                                    android:layout_weight="1"
-                                    android:text="TextView" />
-
-                                <TextView
                                     android:id="@+id/tv_first"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
@@ -419,12 +399,13 @@
                             android:layout_height="wrap_content"
                             android:layout_alignParentBottom="true"
                             android:layout_centerHorizontal="true"
-                            app:cardBackgroundColor="@color/nullcolor">
+                            app:cardBackgroundColor="@color/nullcolor"
+                            app:cardCornerRadius="20dp">
 
                             <LinearLayout
                                 android:id="@+id/lin_addList_first"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
                                 android:layout_alignParentBottom="true"
                                 android:layout_gravity="bottom"
                                 android:background="@drawable/round_backg_gray"
@@ -455,8 +436,8 @@
 
                             <LinearLayout
                                 android:id="@+id/lin_download_first"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
                                 android:layout_alignParentBottom="true"
                                 android:layout_gravity="bottom"
                                 android:background="@drawable/round_bg_purple"
@@ -504,6 +485,7 @@
                         <androidx.cardview.widget.CardView
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
+                            android:layout_centerHorizontal="true"
                             android:layout_marginBottom="15dp"
                             app:cardCornerRadius="5dp">
 
@@ -523,14 +505,6 @@
                                 android:orientation="horizontal">
 
                                 <TextView
-                                    android:id="@+id/tv_pricesec"
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:layout_marginRight="5dp"
-                                    android:layout_weight="1"
-                                    android:text="TextView" />
-
-                                <TextView
                                     android:id="@+id/tv_secHighSchool"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
@@ -545,12 +519,13 @@
                             android:layout_height="wrap_content"
                             android:layout_alignParentBottom="true"
                             android:layout_centerHorizontal="true"
-                            app:cardBackgroundColor="@color/nullcolor">
+                            app:cardBackgroundColor="@color/nullcolor"
+                            app:cardCornerRadius="20dp">
 
                             <LinearLayout
                                 android:id="@+id/lin_addlist_second"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
                                 android:layout_alignParentBottom="true"
                                 android:layout_gravity="bottom"
                                 android:background="@drawable/round_backg_gray"
@@ -581,8 +556,8 @@
 
                             <LinearLayout
                                 android:id="@+id/lin_download_secound"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
                                 android:layout_alignParentBottom="true"
                                 android:layout_gravity="bottom"
                                 android:background="@drawable/round_bg_purple"
@@ -637,6 +612,7 @@
                         <androidx.cardview.widget.CardView
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
+                            android:layout_centerHorizontal="true"
                             android:layout_marginBottom="15dp"
                             app:cardCornerRadius="5dp">
 
@@ -656,14 +632,6 @@
                                 android:orientation="horizontal">
 
                                 <TextView
-                                    android:id="@+id/tv_pricethird"
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:layout_marginRight="5dp"
-                                    android:layout_weight="1"
-                                    android:text="TextView" />
-
-                                <TextView
                                     android:id="@+id/tv_thirdHighSchool"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
@@ -678,12 +646,13 @@
                             android:layout_height="wrap_content"
                             android:layout_alignParentBottom="true"
                             android:layout_centerHorizontal="true"
-                            app:cardBackgroundColor="@color/nullcolor">
+                            app:cardBackgroundColor="@color/nullcolor"
+                            app:cardCornerRadius="20dp">
 
                             <LinearLayout
                                 android:id="@+id/lin_addList_third"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
                                 android:layout_alignParentBottom="true"
                                 android:layout_gravity="bottom"
                                 android:background="@drawable/round_backg_gray"
@@ -714,8 +683,8 @@
 
                             <LinearLayout
                                 android:id="@+id/lin_download_third"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
                                 android:layout_alignParentBottom="true"
                                 android:layout_gravity="bottom"
                                 android:background="@drawable/round_bg_purple"
@@ -763,6 +732,7 @@
                         <androidx.cardview.widget.CardView
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
+                            android:layout_centerHorizontal="true"
                             android:layout_marginBottom="15dp"
                             app:cardCornerRadius="5dp">
 
@@ -782,14 +752,6 @@
                                 android:orientation="horizontal">
 
                                 <TextView
-                                    android:id="@+id/tv_pricepish"
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:layout_marginRight="5dp"
-                                    android:layout_weight="1"
-                                    android:text="TextView" />
-
-                                <TextView
                                     android:id="@+id/tv_pish"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
@@ -804,12 +766,13 @@
                             android:layout_height="wrap_content"
                             android:layout_alignParentBottom="true"
                             android:layout_centerHorizontal="true"
-                            app:cardBackgroundColor="@color/nullcolor">
+                            app:cardBackgroundColor="@color/nullcolor"
+                            app:cardCornerRadius="20dp">
 
                             <LinearLayout
                                 android:id="@+id/lin_addList_pish"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
                                 android:layout_alignParentBottom="true"
                                 android:layout_gravity="bottom"
                                 android:background="@drawable/round_backg_gray"
@@ -840,8 +803,8 @@
 
                             <LinearLayout
                                 android:id="@+id/lin_download_pish"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
                                 android:layout_alignParentBottom="true"
                                 android:layout_gravity="bottom"
                                 android:background="@drawable/round_bg_purple"

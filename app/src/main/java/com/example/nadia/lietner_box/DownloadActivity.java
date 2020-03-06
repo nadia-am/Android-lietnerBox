@@ -124,6 +124,32 @@ public class DownloadActivity extends AppCompatActivity implements View.OnClickL
         back.setTypeface(font);
         back.setText(R.string.icon_back);
 
+//        TextView tv_price504 = findViewById(R.id.tv_price504);
+//        tv_price504.setText(R.string.price504);
+//        tv_price504.setTypeface(custom_font);
+//
+//        TextView tv_price1100 = findViewById(R.id.tv_price1100);
+//        tv_price1100.setText(R.string.price504);
+//        tv_price1100.setTypeface(custom_font);
+//
+//        TextView tv_pricefirst = findViewById(R.id.tv_pricefirst);
+//        tv_pricefirst.setText(R.string.price504);
+//        tv_pricefirst.setTypeface(custom_font);
+//
+//        TextView tv_pricesec = findViewById(R.id.tv_pricesec);
+//        tv_pricesec.setText(R.string.price504);
+//        tv_pricesec.setTypeface(custom_font);
+//
+//        TextView tv_pricethird = findViewById(R.id.tv_pricethird);
+//        tv_pricethird.setText(R.string.price504);
+//        tv_pricethird.setTypeface(custom_font);
+//
+//        TextView tv_pricepish = findViewById(R.id.tv_pricepish);
+//        tv_pricepish.setText(R.string.price504);
+//        tv_pricepish.setTypeface(custom_font);
+
+
+
 //        String[] osNameList = {"1100","504","اول دبیرستان", "دوم دبیرستان", "سوم دبیرستان" , "پیش دانشگاهی"};
 //        int[] osImages = { R.drawable.onehundred,R.drawable.fiveofour ,
 //                R.drawable.first , R.drawable.second , R.drawable.third , R.drawable.beforuni,};
